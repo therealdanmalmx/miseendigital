@@ -23,7 +23,7 @@ const Header = () => {
         transition={{ duration: 0.75, delay: 0.25 }}
         className="text-center"
       >
-        <p className="text-6xl text-slate-600 li">Squared Circle Studio</p>
+        <p className="card text-6xl text-slate-600 li">Squared Circle Studio</p>
       </motion.div>
       <motion.div
         whileInView={{ opacity: [0, 1] }}
