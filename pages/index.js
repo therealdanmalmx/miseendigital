@@ -1,5 +1,6 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 import About from './about'
 import Skills from './skills'
 import Testiomonial from './testiomonial'
@@ -8,11 +9,12 @@ import Work from './work'
 export default function Home() {
   return (
     <div className="App">
+        <Navbar />
         <Header />
         <About />
+        <Work />
         <Skills />
         <Testiomonial />
-        <Work />
         <Footer />
     </div>
   );
