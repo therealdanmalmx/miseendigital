@@ -1,9 +1,19 @@
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import About from './about'
+import Skills from './skills'
+import Testiomonial from './testiomonial'
+import Work from './work'
+
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-center text-4xl bold mt-4 text-green-900">
-        Squared Circle Studio
-      </h1>
+    <div className="App">
+        <Header />
+        <About />
+        <Skills />
+        <Testiomonial />
+        <Work />
+        <Footer />
     </div>
   );
 }
