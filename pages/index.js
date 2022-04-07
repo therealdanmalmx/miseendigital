@@ -9,7 +9,7 @@ import Work from "./work";
 export default function Home() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
       <Header />
       <About />
       <Work />

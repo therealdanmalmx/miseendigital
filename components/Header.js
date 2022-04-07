@@ -23,7 +23,7 @@ const Header = () => {
         transition={{ duration: 0.75, delay: 0.25 }}
         className="text-center"
       >
-        <p className="card text-6xl text-slate-600 li">Squared Circle Studio</p>
+        <p className="card li text-6xl text-slate-600">Squared Circle Studio</p>
       </motion.div>
       <motion.div
         whileInView={{ opacity: [0, 1] }}
@@ -33,7 +33,7 @@ const Header = () => {
         <div className="flex justify-center text-lg font-bold  text-slate-800">
           <p className="mx-3">Ecommerce</p>
           <p className="mx-3">Web apps</p>
-          <p className="mx-3">Institutional sites</p>
+          <p className="mx-3">Kick-ass sites</p>
           <p className="mx-3">Web Animations</p>
         </div>
       </motion.div>
