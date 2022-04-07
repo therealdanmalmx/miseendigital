@@ -5,6 +5,14 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colors: {
+      'primary-color': '#0063ff',
+      'white': '#fff',
+      'black': '#000'
+    },
+    fontFamily: {
+      sans: ['Montserrat', 'sans-serif'],
+    },
   },
   plugins: [],
 };
