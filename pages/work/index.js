@@ -1,5 +1,18 @@
+import { useState, useEffect } from "react";
+import { urlFor, client } from "../../client";
+
 const Work = () => {
-  return <div className="text-center mt-12">Work</div>;
+  const [work, setWork] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "works"]';
+
+    client.fetch(query).then((data) => setWork(data));
+  }, []);
+
+  console.log("work", work);
+
+  return <div className="mt-12 text-center">Work</div>;
 };
 
 export default Work;

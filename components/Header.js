@@ -31,10 +31,10 @@ const Header = () => {
         className="text-center"
       >
         <div className="flex justify-center text-lg font-bold  text-slate-800">
-          <p className="mx-3">Ecommerce</p>
-          <p className="mx-3">Web apps</p>
-          <p className="mx-3">Kick-ass sites</p>
-          <p className="mx-3">Web Animations</p>
+          <p className="mx-6">Ecommerce</p>
+          <p className="mx-6">Web apps</p>
+          <p className="mx-6">Kick-ass sites</p>
+          <p className="mx-6">Web Animations</p>
         </div>
       </motion.div>
     </div>

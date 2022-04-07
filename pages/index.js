@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import About from "./about";
 import Skills from "./skills";
-import Testiomonial from "./testiomonial";
+import Testimonial from "./testimonial";
 import Work from "./work";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <About />
       <Work />
       <Skills />
-      <Testiomonial />
+      <Testimonial />
       <Footer />
     </div>
   );
