@@ -14,7 +14,7 @@ const Testimonial = () => {
 
   return (
     <div>
-      <h2 className="mb-2 text-center">Testimonials</h2>
+      <h2 className="text-center">Testimonials</h2>
       {testimonial.map((testimonial, index) => (
         <>
           {/* <Image

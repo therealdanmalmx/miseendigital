@@ -12,7 +12,7 @@ const Work = () => {
 
   console.log("work", work);
 
-  return <div className="mt-12 text-center">Work</div>;
+  return <div className="text-center">Work</div>;
 };
 
 export default Work;
