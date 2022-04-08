@@ -16,6 +16,19 @@
   button:hover {
     @apply bg-white text-primary-color
   }
+
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  a {
+    @apply text-primary-color;
+  }
 }
 
 @layer components {
