@@ -24,7 +24,8 @@ module.exports = {
       'primary-color': '#4e15ed',
       'secondary-color': '#080f20',
       'white': '#fff',
-      'black': '#000'
+      'black': '#000',
+      'light-color': "#f9f9fc"
     },
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],

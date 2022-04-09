@@ -14,11 +14,11 @@ const abouts = [
 
 const About = () => {
   return (
-    <>
-      <h1 className="app_about-head-text flex-1 w-full flex-col text-center pt-20 font-bold md:text-5xl">
+    <div className="app__about py-10">
+      <h1 className="app__about-head-text mb-5 flex-1 w-full flex-col text-center font-bold md:text-5xl">
           We help your business grow  
       </h1>
-        <div className="app__profiles flex justify-center items-start flex-wrap mt-8">
+      <div className="app__profiles flex justify-center items-start flex-wrap">
             {abouts.map((about, index) =>(
               <motion.div
                 whileInView={{ opacity: 1 }}
@@ -32,8 +32,8 @@ const About = () => {
                 <p className="p-text" style={{ marginTop: 5}}>{about.description}</p>
               </motion.div>
             ))}
-        </div> 
-      </>  
+      </div> 
+    </div>  
   );
 };
 

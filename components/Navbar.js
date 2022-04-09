@@ -1,21 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    console.log(isScrolled)
     
-    const changeBackground = () => {
-        if(window.scrollY >= 80) {
-            setIsScrolled(true);
-        } else {
-            setIsScrolled(false);
+    useEffect(() => {
+        const changeBackground = () => {
+            if(window.scrollY >= 80) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
         }
-    }
 
-    window.addEventListener('scroll', changeBackground)
+        window.addEventListener('scroll', changeBackground)
+    });
 
   return (
     <nav className={`app__navbar fixed top-0 left-0 transition-all duration-200 w-full h-[80px] border-b-[1px] border-white flex justify-between items-center px-8 py-14 backdrop-blur-sm z-10
@@ -39,8 +40,8 @@ const Navbar = () => {
                                 <li className="m-4" key={item}>
                                     <a className="text-white font-bold text-6xl hover:text-primary-color" href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
                                 </li>
-                            ))}
-                        </ul>
+                        ))}
+                    </ul>
                     </motion.div>
                 )}
             </div>
