@@ -1,64 +1,76 @@
-import Image from "next/image";
 import { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { images } from "./../utils";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  console.log(isScrolled);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
-    <nav className="app__navbar bg-slate-50 border-slate-100 sticky top-0 z-10 flex w-full items-center justify-between px-8 py-4 backdrop-blur-sm">
+    <nav
+      className={`app__navbar fixed top-0 left-0 z-10 flex h-[80px] w-full items-center justify-between border-b-[1px] border-white px-8 py-14 backdrop-blur-sm transition-all duration-200
+    ${isScrolled ? "bg-white" : "bg-transparent"}`}
+    >
       <div className="app__navbar-logo flex items-center justify-start ">
-        <Image width={90} height={90} src={images.logo} alt="logo" />
+        <h1
+          className={`mr-4 text-3xl font-bold text-white sm:text-4xl ${
+            isScrolled ? "text-black" : "text-white"
+          }`}
+        >
+          Brand.
+        </h1>
       </div>
-      <ul className="app__navbar-links flex flex-1 items-center justify-center">
-        {["home", "about", "work", "skills", "contact"].map((item) => (
-          <li
-            className="mx-4 cursor-pointer flex-col text-center"
-            key={`link-${item}`}
-          >
-            <div className="bg-transparent mb-1 h-1 w-1 rounded-full" />
-            <a
-              className="text-gray-600 flex-col font-medium uppercase duration-300 ease-in-out hover:text-primary-color"
-              href={`#${item}`}
+      <div className="flex items-center">
+        <div
+          class={`mr-4 font-bold text-white ${
+            isScrolled ? "text-black" : "text-white"
+          }`}
+        >
+          Menu
+        </div>
+        <div className="app__navbar-menu relative flex h-9 w-9 cursor-pointer items-center justify-center bg-primary-color">
+          <HiMenuAlt4
+            className="h-6 w-6 text-white"
+            onClick={() => setToggle(true)}
+          />
+
+          {toggle && (
+            <motion.div
+              className="fixed top-0 bottom-0 right-0 z-10 flex h-screen w-full items-center justify-center bg-secondary-color p-4 text-center"
+              whileInView={{ y: [-100, 0] }}
+              transition={{ duration: 0.85, ease: "easeOut" }}
             >
-              {item}
-            </a>
-          </li>
-        ))}
-      </ul>
-
-      <div className="app__navbar-menu relative flex h-9 w-9 items-center justify-center rounded-full bg-primary-color sm:hidden">
-        <HiMenuAlt4
-          className="h-6 w-6 text-white"
-          onClick={() => setToggle(true)}
-        />
-
-        {toggle && (
-          <motion.div
-            className="fixed top-0 bottom-0 right-0 z-10 h-screen w-3/6 bg-white p-4 sm:hidden"
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: "easeOut" }}
-          >
-            <HiX
-              className="absolute right-4 h-6 w-6 text-black"
-              onClick={() => setToggle(false)}
-            />
-            <ul>
-              {["home", "about", "work", "skills", "contact"].map((item) => (
-                <li className="m-4" key={item}>
-                  <a
-                    className="font-bold uppercase text-primary-color"
-                    href={`#${item}`}
-                    onClick={() => setToggle(false)}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
+              <HiX
+                className="absolute right-4 top-4 h-6 w-6 text-white"
+                onClick={() => setToggle(false)}
+              />
+              <ul className="">
+                {["Home", "About", "Work", "Skills", "Contact"].map((item) => (
+                  <li className="m-4" key={item}>
+                    <a
+                      className="text-6xl font-bold text-white hover:text-primary-color"
+                      href={`#${item}`}
+                      onClick={() => setToggle(false)}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </div>
       </div>
     </nav>
   );

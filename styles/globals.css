@@ -4,6 +4,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  li {
+    @apply p-4;
+  }
+
+  button {
+    @apply bg-primary-color text-white text-xl font-bold py-4 px-10
+  }
+
+  button:hover {
+    @apply bg-white text-primary-color
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  a {
+    @apply text-primary-color;
+  }
+}
+
 @layer components {
   .card {
     background-color: theme("colors.white");
