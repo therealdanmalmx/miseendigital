@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 
@@ -7,17 +7,19 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   console.log(isScrolled);
 
-  const changeBackground = () => {
-    if (window.scrollY >= 80) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
+  useEffect(() => {
+    const changeBackground = () => {
+      if (window.scrollY >= 80) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+  
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", changeBackground);
     }
-  };
-
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", changeBackground);
-  }
+  }, [])
 
   return (
     <nav
