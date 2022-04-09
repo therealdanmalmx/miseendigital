@@ -3,33 +3,34 @@ import { urlFor, client } from "../../client";
 import Image from "next/image";
 
 const Testimonial = () => {
-  const [testimonial, setTestimonial] = useState([]);
+  const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
     const query = '*[_type == "testimonials"]';
 
-    client.fetch(query).then((data) => setTestimonial(data));
+    client.fetch(query).then((data) => setTestimonials(data));
   }, []);
-  console.log("testimonial", testimonial);
+  console.log("testimonials", testimonials);
 
   return (
     <div>
-      <h2 className="text-center">Testimonials</h2>
-      {testimonial.map((testimonial, index) => (
-        <>
-          {/* <Image
+      <h2 className="mb-2 text-center">Testimonials</h2>
+      {testimonials.map((testimonial, index) => (
+        <div key={testimonial._id}>
+          {/* <img
             key={index}
-            src={urlFor(testimonial.imgUrl)}
+            src={urlFor(testimonial[0].imgUrl.asset)}
             height={100}
             width={100}
             fill="objectFit"
+            className="mx-auto"
           /> */}
           <div className="text-center">
             <h2>Feedback: {testimonial.feedback}</h2>
             <p>Name: {testimonial.name}</p>
             <p>Company: {testimonial.company}</p>
           </div>
-        </>
+        </div>
       ))}
     </div>
   );
