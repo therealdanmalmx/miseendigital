@@ -51,7 +51,7 @@ const Work = () => {
         {filterWork.map((work, index) => (
           <div className="app__work-item flex" key={index}>
             <div className="app__work-img flex">
-              <Image src={urlFor(work.imgUrl)} />
+              <img src={urlFor(work.imgUrl)} />
             </div>
           </div>
         ))}
