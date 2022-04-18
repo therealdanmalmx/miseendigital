@@ -35,7 +35,7 @@ const Navbar = () => {
       </div>
       <div className="flex items-center">
         <div
-          class={`mr-4 font-bold text-white ${
+          className={`mr-4 font-bold text-white ${
             isScrolled ? "text-black" : "text-white"
           }`}
         >
