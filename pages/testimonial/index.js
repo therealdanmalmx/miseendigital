@@ -17,14 +17,6 @@ const Testimonial = () => {
       <h2 className="mb-2 text-center">Testimonials</h2>
       {testimonials.map((testimonial, index) => (
         <div key={testimonial._id}>
-          {/* <img
-            key={index}
-            src={urlFor(testimonial[0].imgUrl.asset)}
-            height={100}
-            width={100}
-            fill="objectFit"
-            className="mx-auto"
-          /> */}
           <div className="text-center">
             <h2>Feedback: {testimonial.feedback}</h2>
             <p>Name: {testimonial.name}</p>

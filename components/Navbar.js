@@ -15,11 +15,11 @@ const Navbar = () => {
         setIsScrolled(false);
       }
     };
-  
+
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", changeBackground);
     }
-  }, [])
+  }, []);
 
   return (
     <nav
@@ -64,7 +64,7 @@ const Navbar = () => {
                   <li className="m-4" key={item}>
                     <a
                       className="text-6xl font-bold text-white hover:text-primary-color"
-                      href={`#${item}`}
+                      href={`/${item.toLowerCase()}`}
                       onClick={() => setToggle(false)}
                     >
                       {item}
