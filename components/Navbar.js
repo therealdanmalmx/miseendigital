@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const changeBackground = () => {
-      if (window.scrollY >= 80) {
+      if (window.scrollY >= 150) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -60,11 +60,18 @@ const Navbar = () => {
                 onClick={() => setToggle(false)}
               />
               <ul className="">
-                {["Home", "About", "Work", "Skills", "Contact"].map((item) => (
+                {[
+                  "Home",
+                  "About",
+                  "Work",
+                  "Skills",
+                  "Testimonials",
+                  "Contact",
+                ].map((item) => (
                   <li className="m-4" key={item}>
                     <a
                       className="text-6xl font-bold text-white hover:text-primary-color"
-                      href={`/${item.toLowerCase()}`}
+                      href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                       onClick={() => setToggle(false)}
                     >
                       {item}

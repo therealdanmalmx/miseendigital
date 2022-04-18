@@ -14,14 +14,24 @@ const Testimonial = () => {
 
   return (
     <div>
-      <h2 className="mb-2 text-center">Testimonials</h2>
+      <h2 className="mt-28 mb-2 text-center">Testimonials</h2>
       {testimonials.map((testimonial, index) => (
         <div key={testimonial._id}>
-          <div className="text-center">
-            <h2>Feedback: {testimonial.feedback}</h2>
-            <p>Name: {testimonial.name}</p>
-            <p>Company: {testimonial.company}</p>
-          </div>
+          <>
+            {/* <Image
+              key={index}
+              src={urlFor(testimonial.imgUrl)}
+              height={100}
+              width={100}
+              fill="objectFit"
+              className="mx-auto"
+            /> */}
+            <div className="text-center">
+              <h2>Feedback: {testimonial.feedback}</h2>
+              <p>Name: {testimonial.name}</p>
+              <p>Company: {testimonial.company}</p>
+            </div>
+          </>
         </div>
       ))}
     </div>

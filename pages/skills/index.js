@@ -12,7 +12,7 @@ const Skills = () => {
 
   console.log("skills", skills);
 
-  return <div className="text-center">Skills</div>;
+  return <div className="mt-28 text-center">Skills</div>;
 };
 
 export default Skills;

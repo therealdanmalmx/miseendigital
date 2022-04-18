@@ -9,6 +9,8 @@ export const client = sanityClient({
   token: process.env.NEXT_APP_SANITY_TOKEN,
 });
 
+console.log({ client });
+
 const builder = new imageUrlBuilder(client);
 
 export const urlFor = (source) => builder.image(source);

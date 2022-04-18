@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { urlFor, client } from "../../client";
-import { AiFillEye, AiFillGithub } from 'react-icons/ai';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -13,11 +13,10 @@ const Work = () => {
   useEffect(() => {
     const query = '*[_type == "works"]';
 
-    client.fetch(query)
-      .then((data) => { 
-        setWorks(data);
-        setFilterWork(data);
-      });
+    client.fetch(query).then((data) => {
+      setWorks(data);
+      setFilterWork(data);
+    });
   }, []);
 
   console.log("work", works);
@@ -38,9 +37,9 @@ const Work = () => {
   }
 
   return (
-    <div className="app__works bg-light-color py-10">
-      <h1 className="app_about-head-text flex-1 w-full flex-col text-center font-bold md:text-5xl">
-          Our Creative Portfolio
+    <div className="app__works mt-28 bg-light-color py-10">
+      <h1 className="app_about-head-text w-full flex-1 flex-col text-center font-bold md:text-5xl">
+        Our Creative Portfolio
       </h1>
       <div className="app__work-filter flex justify-center flex-wrap my-10">
         {['All','UI/UX', 'Web App','Mobile App','React JS'].map((item, index) =>(
@@ -104,7 +103,7 @@ const Work = () => {
         ))}
       </motion.div>
     </div>
-  )
+  );
 };
 
 export default Work;
