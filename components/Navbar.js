@@ -60,7 +60,14 @@ const Navbar = () => {
                 onClick={() => setToggle(false)}
               />
               <ul className="">
-                {["Home", "About", "Work", "Skills", "Contact"].map((item) => (
+                {[
+                  "Home",
+                  "About",
+                  "Work",
+                  "Skills",
+                  "Testimonials",
+                  "Contact",
+                ].map((item) => (
                   <li className="m-4" key={item}>
                     <a
                       className="text-6xl font-bold text-white hover:text-primary-color"

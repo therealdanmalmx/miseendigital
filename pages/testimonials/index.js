@@ -14,7 +14,7 @@ const Testimonial = () => {
 
   return (
     <div>
-      <h2 className="mb-2 text-center">Testimonials</h2>
+      <h2 className="mt-28 mb-2 text-center">Testimonials</h2>
       {testimonials.map((testimonial, index) => (
         <div key={testimonial._id}>
           <div className="text-center">

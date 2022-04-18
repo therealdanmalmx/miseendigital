@@ -4,13 +4,12 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "./about";
 import Skills from "./skills";
-import Testimonial from "./testimonial";
+import Testimonial from "./testimonials";
 import Work from "./work";
 
 export default function Home() {
   return (
     <div className="App">
-      <Navbar />
       <Hero />
       <About />
       <Work />
