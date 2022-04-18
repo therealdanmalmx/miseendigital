@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div class="app_hero flex h-screen w-full flex-col items-center justify-center bg-secondary-color">
+    <div className="app_hero flex h-screen w-full flex-col items-center justify-center bg-secondary-color">
       <h1 className="mb-4 max-w-4xl text-center text-5xl font-bold leading-snug text-white md:text-7xl md:leading-tight">
         We <span className="text-primary-color">design</span> and{" "}
         <span className="text-primary-color">develop</span> digital solutions
