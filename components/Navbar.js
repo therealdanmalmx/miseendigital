@@ -71,7 +71,7 @@ const Navbar = () => {
                   <li className="m-4" key={item}>
                     <a
                       className="text-6xl font-bold text-white hover:text-primary-color"
-                      href={"Home" ? "/" : `/${item.toLowerCase()}`}
+                      href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                       onClick={() => setToggle(false)}
                     >
                       {item}
