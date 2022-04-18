@@ -66,7 +66,7 @@ const Navbar = () => {
                   "Work",
                   "Skills",
                   "Testimonials",
-                  "Contact",
+                  "Contacts",
                 ].map((item) => (
                   <li className="m-4" key={item}>
                     <a
