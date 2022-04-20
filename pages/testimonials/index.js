@@ -20,8 +20,9 @@ const Testimonial = () => {
       {testimonials.map(
         (testimonial, index) => (
           console.log({ testimonial }),
-          testimonial && testimonial.imgUrl && (
+          testimonial.imgUrl && (
             <Image
+              loader="imgix"
               src={urlFor(testimonial.imgUrl)}
               height={100}
               width={100}
