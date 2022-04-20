@@ -67,7 +67,7 @@ const Navbar = () => {
                   "Work",
                   "Skills",
                   "Testimonials",
-                  "Contact",
+                  "Contacts",
                 ].map((item) => (
                   <Link
                     passHref
