@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 
@@ -68,15 +69,19 @@ const Navbar = () => {
                   "Testimonials",
                   "Contact",
                 ].map((item) => (
-                  <li className="m-4" key={item}>
-                    <a
-                      className="text-6xl font-bold text-white hover:text-primary-color"
-                      href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                      onClick={() => setToggle(false)}
-                    >
-                      {item}
-                    </a>
-                  </li>
+                  <Link
+                    passHref
+                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  >
+                    <li className="m-4" key={item}>
+                      <a
+                        className="text-6xl font-bold text-white hover:text-primary-color"
+                        onClick={() => setToggle(false)}
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  </Link>
                 ))}
               </ul>
             </motion.div>
