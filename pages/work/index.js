@@ -37,18 +37,18 @@ const Work = () => {
   };
 
   return (
-    <div className="app__works mt-28 bg-light-color py-10">
+    <div className="app__works bg-light-color py-28">
       <h1 className="app_about-head-text w-full flex-1 flex-col text-center font-bold md:text-5xl">
         Our Creative Portfolio
       </h1>
       <div className="app__work-filter my-10 flex flex-wrap justify-center">
-        {["All", "UI/UX", "Web App", "E-commerce", "Next JS"].map(
+        {["All", "UX/UI", "Mobile App", "E-commerce", "Next JS"].map(
           (item, index) => (
             <div
               key={index}
               onClick={() => handleWorkFilter(item)}
               className={`app_work-filter-item mx-2 flex cursor-pointer rounded-md bg-white px-4 py-2 text-base font-medium text-black duration-300 ease-in hover:bg-primary-color hover:text-white ${
-                activeFilter === item ? "item-active" : ""
+                activeFilter === item ? "bg-primary-color text-white" : ""
               }`}
             >
               {item}
@@ -60,12 +60,12 @@ const Work = () => {
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__work-portfolio flex w-full flex-1 flex-col flex-wrap items-center justify-center"
+        className="app__work-portfolio flex w-full flex-1 flex-row flex-wrap items-center justify-center"
       >
         {filterWork.map((work, index) => (
           <div className="app__work-item w-80 flex-col bg-white rounded p-4 m-8 cursor-pointer ease-in duration-300 hover:shadow-lg" key={index}>
             <div className="app__work-img flex items-center w-full relative">
-              <Image className="w-full h-full rounded-lg object-cover" src={urlFor(work.imgUrl)} alt={work.name} /> 
+              <img className="w-full h-full rounded-lg object-cover" src={urlFor(work.imgUrl)} alt={work.name} /> 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{

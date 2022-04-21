@@ -17,7 +17,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="app__about mt-28 py-10">
+    <div className="app__about py-28">
       <h1 className="app__about-head-text mb-5 w-full flex-1 flex-col text-center font-bold md:text-5xl">
         We help your business grow
       </h1>
