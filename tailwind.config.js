@@ -23,8 +23,8 @@ module.exports = {
     colors: {
       'primary-color': '#4e15ed',
       'secondary-color': '#080f20',
-      'white': '#fff',
-      'black': '#000',
+      'white': '#ffffff',
+      'black': '#000000',
       'light-color': "#f9f9fc"
     },
     fontFamily: {
