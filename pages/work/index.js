@@ -61,7 +61,7 @@ const Work = () => {
         {filterWork.map((work, index) => (
           <div className="app__work-item w-80 flex-col bg-white rounded p-4 m-8 cursor-pointer ease-in duration-300 hover:shadow-lg" key={index}>
             <div className="app__work-img flex items-center w-full relative">
-              <img className="w-full h-full rounded-lg object-cover" src={urlFor(work.imgUrl)} alt={work.name} />         
+              <Image className="w-full h-full rounded-lg object-cover" src={urlFor(work.imgUrl)} alt={work.name} /> 
               <motion.div
                 whileHover={{opacity: [0,1]}}
                 transition={{duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5}}
