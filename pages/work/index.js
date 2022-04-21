@@ -63,9 +63,12 @@ const Work = () => {
         className="app__work-portfolio flex w-full flex-1 flex-col flex-wrap items-center justify-center"
       >
         {filterWork.map((work, index) => (
-          <div className="app__work-item w-80 flex-col bg-white rounded p-4 m-8 cursor-pointer ease-in duration-300 hover:shadow-lg" key={index}>
-            <div className="app__work-img flex items-center w-full relative">
-              <Image className="w-full h-full rounded-lg object-cover" src={urlFor(work.imgUrl)} alt={work.name} /> 
+          <div
+            className="app__work-item m-8 w-80 cursor-pointer flex-col rounded bg-white p-4 duration-300 ease-in hover:shadow-lg"
+            key={index}
+          >
+            <div className="app__work-img relative flex w-full items-center">
+              {/* <Image classxName="w-full h-full rounded-lg object-cover" src={urlFor(work.imgUrl)} alt={work.name} />  */}
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{

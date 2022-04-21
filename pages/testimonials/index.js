@@ -20,17 +20,17 @@ const Testimonial = () => {
       {testimonials.map(
         (testimonial, index) => (
           console.log({ testimonial }),
-          testimonial.imgUrl && (
-            <Image
-              loader="imgix"
-              src={urlFor(testimonial.imgUrl)}
-              height={100}
-              width={100}
-              fill="objectFit"
-              className="mx-auto"
-            />
-          ),
           (
+            // testimonial.imgUrl && (
+            //   <Image
+            //     loader="imgix"
+            //     src={urlFor(testimonial.imgUrl)}
+            //     height={100}
+            //     width={100}
+            //     fill="objectFit"
+            //     className="mx-auto"
+            //   />
+            // ),
             <div key={index} className="text-center">
               <>
                 <h2>Feedback: {testimonial.feedback}</h2>
