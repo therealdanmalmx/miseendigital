@@ -29,7 +29,7 @@ const Skills = () => {
       <h1 className="app_skills-head-text my-10 w-full flex-1 flex-col text-center font-bold md:text-5xl">
         Skills and Experience
       </h1>
-      <div className="app__skills-container flex justify-center md:justify-start">
+      <div className="app__skills-container flex justify-center items-center">
         <motion.div className="app__skills-list flex flex-wrap">
           {skills?.map((skill) => (
             <motion.div
@@ -45,7 +45,7 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
-        <motion.div className="app_skills-exp">
+        {/* <motion.div className="app_skills-exp">
             {experience?.map((experience) => ( 
               <motion.div
                 className="app__skills-exp-item"
@@ -81,7 +81,7 @@ const Skills = () => {
                 </motion.div>
               </motion.div>
             ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
