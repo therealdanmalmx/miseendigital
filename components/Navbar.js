@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="app__navbar-logo flex items-center justify-start ">
         <h1
           className={`mr-4 text-3xl font-bold sm:text-4xl 
-          ${ isScrolled ? "text-black" : "text-white"}`}
+          ${isScrolled ? "text-black" : "text-white"}`}
         >
           Brand.
         </h1>
