@@ -35,12 +35,12 @@ const Contacts = () => {
   }
 
   return (
-  <div className="app__footer w-full flex-1 flex-col py-28">
-    <h1 className="app__footer-head-text mb-5 w-full flex-1 flex-col text-center font-bold md:text-5xl">
+  <div className="app__contact w-full flex-1 flex-col py-28">
+    <h1 className="app__contact-head-text mb-5 w-full flex-1 flex-col text-center font-bold md:text-5xl">
       Get in touch with us
     </h1>
     {!isFormSubmitted ? 
-    <div className="app__footer-form w-full flex flex-col items-center">
+    <div className="app__contact-form w-full flex flex-col items-center">
       <div className="flex mb-4 w-full px-5 md:w-[50%]">
         <input className="w-full border-2 p-4 rounded-xl bg-light-color font-sans text-sm placeholder:text-black hover:shadow-md" type="text" name="name" placeholder="Your Name" value={name} onChange={handleChangeInput} />
       </div>
@@ -56,7 +56,7 @@ const Contacts = () => {
           onChange={handleChangeInput}
         />
       </div>
-      <button type="button" className="text-white bg-primary-color mt-5 text-lg hover:bg-black hover:text-white" onClick={handleSubmit}>{loading ? 'Sending' : 'Send Message'}</button>
+      <button type="button" className="text-white bg-primary-color mt-5 text-lg hover:bg-black hover:text-white" onClick={handleSubmit}>{loading ? 'Sending...' : 'Send Message'}</button>
     </div>
     : <div>
         <h3>Thank you for getting in touch!</h3>

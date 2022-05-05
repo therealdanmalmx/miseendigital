@@ -5,10 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  li {
-    @apply p-4;
-  }
-
   button {
     @apply bg-primary-color text-white text-xl font-bold py-4 px-10
   }
@@ -27,7 +23,7 @@
     @apply text-lg;
   }
   a {
-    @apply text-primary-color;
+    @apply text-grey-color;
   }
 }
 
