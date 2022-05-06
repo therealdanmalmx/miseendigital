@@ -17,7 +17,7 @@ const Testimonial = () => {
       <h4 className="mt-28 mb-8 text-center text-5xl font-bold">
         Testimonials
       </h4>
-      <div className="md:flex-rows flex flex-col">
+      <div className="flex flex-col md:flex-row">
         {testimonials.map(
           (testimonial, index) => (
             console.log({ testimonial }),
@@ -32,26 +32,23 @@ const Testimonial = () => {
               //     className="mx-auto"
               //   />
               // ),
-              <div class="max-w-1/3 mx-2 mb-2 overflow-hidden rounded-xl bg-black shadow-md md:max-w-2xl">
+              <div class="max-w-1/3 mx-2 mb-2 overflow-hidden rounded-xl bg-light-color shadow-md md:max-w-2xl">
                 <div class="md:flex">
                   <div class="md:shrink-0">
                     <img
-                      class="relative h-48 w-full object-cover transition ease-out hover:scale-105 hover:duration-500 hover:ease-in md:h-40 md:w-48"
+                      class="relative h-48 w-full object-cover transition duration-300 ease-out hover:scale-105 hover:ease-in md:h-40 md:w-48"
                       src={urlFor(testimonial.imgUrl)}
                       alt={urlFor(testimonial.imgUrl)}
                     />
                   </div>
                   <div class="p-4">
-                    <div class="text-indigo-500 text-xl font-semibold uppercase tracking-wide dark:text-white">
+                    <div class="text-xl font-semibold uppercase tracking-wide text-primary-color ">
                       {testimonial.name}
                     </div>
-                    <a
-                      href="#"
-                      class="mt-1 block text-lg font-medium leading-tight text-black hover:underline dark:text-white"
-                    >
+                    <p class="mt-1 block text-lg font-medium leading-tight text-black">
                       {testimonial.company}
-                    </a>
-                    <p class="text-slate-500 mt-2 text-sm dark:text-white ">
+                    </p>
+                    <p class="text-md mt-2 text-black  md:text-sm ">
                       {testimonial.feedback}
                     </p>
                   </div>
