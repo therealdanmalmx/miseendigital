@@ -2,88 +2,121 @@ import { useState, useEffect } from "react";
 import { urlFor, client } from "../../client";
 import Image from "next/image";
 
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 const Testimonial = () => {
+  const [brands, setBrands] = useState([]);
   const [testimonials, setTestimonials] = useState([]);
+  const [currentIndex, setcCurrentIndex] = useState(0);
+
+  const scrollTestimonials = (index) => {
+    setcCurrentIndex(index);
+  };
 
   useEffect(() => {
     const query = '*[_type == "testimonials"]';
+    const brandQuery = '*[_type == "brands"]';
 
     client.fetch(query).then((data) => setTestimonials(data));
+    client.fetch(brandQuery).then((data) => setBrands(data));
   }, []);
+
   console.log("testimonials", testimonials);
 
+  let testimonial = testimonials[currentIndex];
+  let testimonialSecond = testimonials[currentIndex + 1];
+
+  console.log({ testimonial });
   return (
-    <div>
+    <>
       <h4 className="mt-28 mb-8 text-center text-5xl font-bold">
         Testimonials
       </h4>
-      <div className="flex flex-col md:flex-row">
-        {testimonials.map(
-          (testimonial, index) => (
-            console.log({ testimonial }),
-            (
-              // testimonial.imgUrl && (
-              //   <Image
-              //     loader="imgix"
-              //     src={urlFor(testimonial.imgUrl)}
-              //     height={100}
-              //     width={100}
-              //     fill="objectFit"
-              //     className="mx-auto"
-              //   />
-              // ),
-              <div class="max-w-1/3 mx-2 mb-2 overflow-hidden rounded-xl bg-light-color shadow-md md:max-w-2xl">
+      {testimonials.length && (
+        <>
+          <div className="flex flex-col justify-center md:flex-row">
+            <div>
+              <div class="max-w-1/2 mx-6 mb-4 overflow-hidden rounded-xl bg-light-color shadow-md md:mx-12 md:mb-0 md:max-w-2xl">
                 <div class="md:flex">
                   <div class="md:shrink-0">
                     <img
-                      class="relative h-48 w-full object-cover transition duration-300 ease-out hover:scale-105 hover:ease-in md:h-40 md:w-48"
+                      class="relative h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
                       src={urlFor(testimonial.imgUrl)}
                       alt={urlFor(testimonial.imgUrl)}
                     />
                   </div>
-                  <div class="p-4">
-                    <div class="text-xl font-semibold uppercase tracking-wide text-primary-color ">
-                      {testimonial.name}
+                  <div class="flex flex-col justify-around p-4">
+                    <div>
+                      <div class="text-2xl font-semibold uppercase tracking-wide text-primary-color ">
+                        {testimonial.name}
+                      </div>
+                      <p class="mt-1 block text-xl font-medium leading-tight text-black">
+                        {testimonial.company}
+                      </p>
                     </div>
-                    <p class="mt-1 block text-lg font-medium leading-tight text-black">
-                      {testimonial.company}
-                    </p>
-                    <p class="text-md mt-2 text-black  md:text-sm ">
+                    <p class="text-md mb-6 text-black  md:text-sm ">
                       {testimonial.feedback}
                     </p>
                   </div>
                 </div>
               </div>
-            )
-            // <div
-            //   key={testimonial._id}
-            //   className="max-w-1/3 align-center mb-2 text-left"
-            // >
-            //   <span className="mx-4 flex max-w-screen-sm flex-col items-center rounded-lg border bg-black shadow-md md:max-w-xl md:flex-row lg:flex-row xl:max-w-2xl xl:flex-row">
-            //     <img
-            //       className="h-full max-w-full rounded-t-lg object-cover md:max-w-[45%] md:rounded-none md:rounded-l-lg"
-            //       src={urlFor(testimonial.imgUrl)}
-            //       alt={urlFor(testimonial.imgUrl)}
-            //     />
-            //     <div className="flex flex-col justify-between leading-normal">
-            //       <div className="py-4 px-2">
-            //         <h5 className="text-gray-900 text-2xl font-bold tracking-tight dark:text-white">
-            //           {testimonial.name}
-            //         </h5>
-            //         <h5 className="text-1xl mb-2 font-bold tracking-tight text-black dark:text-white">
-            //           {testimonial.company}
-            //         </h5>
-            //         <p className="text-gray-700 text-md mt-3 font-normal dark:text-white md:text-sm">
-            //           {testimonial.feedback}
-            //         </p>
-            //       </div>
-            //     </div>
-            //   </span>
-            // </div>
-          )
-        )}
-      </div>
-    </div>
+            </div>
+            <div>
+              <div class="max-w-1/2 mx-6 mb-4 overflow-hidden rounded-xl bg-light-color shadow-md md:mx-12 md:mb-0 md:max-w-2xl">
+                <div class="md:flex">
+                  <div class="md:shrink-0">
+                    <img
+                      class="relative h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
+                      src={urlFor(testimonialSecond.imgUrl)}
+                      alt={urlFor(testimonialSecond.imgUrl)}
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between p-4 md:justify-around">
+                    <div>
+                      <div class="text-2xl font-semibold uppercase tracking-wide text-primary-color ">
+                        {testimonialSecond.name}
+                      </div>
+                      <p class="block text-xl font-medium leading-tight text-black">
+                        {testimonialSecond.company}
+                      </p>
+                    </div>
+                    <p class="text-md mb-0 text-black md:mb-6  md:text-sm ">
+                      {testimonialSecond.feedback}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>Hello</div>
+              <span
+                className="btns"
+                onClick={() =>
+                  scrollTestimonials(
+                    currentIndex === 0
+                      ? testimonials.length - 1 && testimonials.length - 2
+                      : currentIndex - 2
+                  )
+                }
+              >
+                <FaChevronLeft />
+              </span>
+              <span
+                className="btns"
+                onClick={() =>
+                  scrollTestimonials(
+                    currentIndex === testimonials.length - 1 &&
+                      testimonials.length - 2
+                      ? 0 && 1
+                      : currentIndex + 2
+                  )
+                }
+              >
+                <FaChevronRight />
+              </span>
+            </div>
+          </div>
+        </>
+      )}
+    </>
   );
 };
 
