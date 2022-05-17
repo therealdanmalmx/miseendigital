@@ -44,3 +44,8 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
+
+.item-active {
+  background-color: theme("colors.primary-color");
+  color: theme("colors.white");
+}
