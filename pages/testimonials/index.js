@@ -103,8 +103,7 @@ const Testimonial = () => {
                 className="btns"
                 onClick={() =>
                   scrollTestimonials(
-                    currentIndex === testimonials.length - 1 &&
-                      testimonials.length - 2
+                    currentIndex === testimonials.length - 2 
                       ? 0 && 1
                       : currentIndex + 2
                   )

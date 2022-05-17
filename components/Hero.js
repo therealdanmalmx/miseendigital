@@ -5,7 +5,7 @@ const Hero = () => {
         We <span className="text-primary-color">design, develop </span> and{" "}
         <span className="text-primary-color">modernize</span> your digital tools
       </h1>
-      <p className="mb-8 text-2xl text-white">
+      <p className="mb-8 px-8 text-2xl text-white text-center">
         Based remotely, with clients all over the world
       </p>
       <button className="duration-300 ease-in-out">Our Portfolio</button>
