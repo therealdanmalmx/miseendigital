@@ -63,9 +63,8 @@ const Navbar = () => {
                 {[
                   "Home",
                   "About",
-                  "Work",
-                  "Skills",
-                  "Testimonials",
+                  "Services",
+                  "Our Work",
                   "Contacts",
                 ].map((item) => (
                   <Link
