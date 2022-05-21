@@ -1,8 +1,13 @@
 import { urlFor, client } from "../../client";
 
 export default function AboutPage({ about }) {
-  console.log({ about });
-  return <div className="mt-40">About: {about}</div>;
+  return (
+    <div className="mt-40 text-center text-2xl font-bold">
+      {about === "e-commerce"
+        ? about.toUpperCase()
+        : about.toUpperCase().split("-").join(" ")}
+    </div>
+  );
 }
 
 export async function getStaticPaths() {
