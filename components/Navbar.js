@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  console.log(isScrolled);
 
   useEffect(() => {
     const changeBackground = () => {
@@ -60,27 +59,23 @@ const Navbar = () => {
                 onClick={() => setToggle(false)}
               />
               <ul className="">
-                {[
-                  "Home",
-                  "About",
-                  "Services",
-                  "Our Work",
-                  "Contacts",
-                ].map((item) => (
-                  <Link
-                    passHref
-                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  >
-                    <li className="m-4" key={item}>
-                      <a
-                        className="text-6xl font-bold text-white hover:text-primary-color"
-                        onClick={() => setToggle(false)}
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  </Link>
-                ))}
+                {["Home", "About", "Services", "Our Work", "Contacts"].map(
+                  (item) => (
+                    <Link
+                      passHref
+                      href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    >
+                      <li className="m-4" key={item}>
+                        <a
+                          className="text-6xl font-bold text-white hover:text-primary-color"
+                          onClick={() => setToggle(false)}
+                        >
+                          {item}
+                        </a>
+                      </li>
+                    </Link>
+                  )
+                )}
               </ul>
             </motion.div>
           )}
