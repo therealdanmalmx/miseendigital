@@ -47,6 +47,12 @@ const About = () => {
           </motion.div>
         ))}
       </div>
+      <button
+            type="button"
+            className="mt-5 bg-primary-color text-lg text-white transition duration-300 ease-in-out hover:bg-black hover:text-white"
+          >
+          See all services
+      </button>
     </div>
   );
 };
