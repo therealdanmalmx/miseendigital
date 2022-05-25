@@ -1,6 +1,29 @@
 import { urlFor, client } from "../../client";
 
+export async function getStaticPaths() {
+  const query = '*[_type == "abouts" && defined(about.current)][].about.current`]';
+
+  const abouts = await client.fetch(query);
+
+  return {
+    paths: abouts.map((about) => ({params: {about}})),
+    fallback: false,
+  }
+}
+
+export async function getStaticProps(context) {
+  const { about = "" } = context.params;
+  const abouts = await client.fetch(`
+    *[_type == "abouts" && about.current == $about]
+  `, { about })
+
+  return {
+    props: { abouts },
+  };
+}
+
 export default function AboutPage({ about }) {
+  
   return (
     <div className="mt-40 text-center text-2xl font-bold">
       {about === "e-commerce"
@@ -8,32 +31,4 @@ export default function AboutPage({ about }) {
         : about.toUpperCase().split("-").join(" ")}
     </div>
   );
-}
-
-export async function getStaticPaths() {
-  const query = '*[_type == "abouts"]';
-
-  const abouts = await client.fetch(query);
-
-  const paths = abouts.map((about) => {
-    about = String(about.title.toLowerCase().split(" ").join("-"));
-
-    return {
-      params: {
-        about,
-      },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const about = params.about;
-
-  return {
-    props: { about },
-  };
 }
