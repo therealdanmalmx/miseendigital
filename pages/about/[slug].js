@@ -34,21 +34,31 @@ export async function getStaticProps({ params }) {
     props: {
       abouts,
     },
-    revalidate: 600,
+    revalidate: 3600,
   };
 }
 
 export default function AboutPage({ abouts }) {
   const { title, description, imgUrl } = abouts;
-  return (
-    <div>
-      <div className="mt-40 text-center text-5xl font-bold">{title}</div>
-      <div className="mt-3 text-center text-xl font-bold">{description}</div>
-      <img
-        className=" relative mx-auto mt-5 h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
-        src={urlFor(imgUrl)}
-        alt={urlFor(imgUrl)}
-      />
-    </div>
-  );
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return (
+      <section>
+        <h1>Loading...</h1>
+      </section>
+    );
+  } else {
+    return (
+      <div>
+        <div className="mt-40 text-center text-5xl font-bold">{title}</div>
+        <div className="mt-3 text-center text-xl font-bold">{description}</div>
+        <img
+          className=" relative mx-auto mt-5 h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
+          src={urlFor(imgUrl)}
+          alt={urlFor(imgUrl)}
+        />
+      </div>
+    );
+  }
 }
