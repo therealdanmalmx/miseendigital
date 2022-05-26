@@ -1,56 +1,50 @@
 import { urlFor, client } from "../../client";
-import { useRouter } from "next/router"
+import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
   const query = '*[_type == "abouts" && defined(slug.current)][].slug.current';
 
   const abouts = await client.fetch(query);
   const paths = abouts.map((slug) => ({
-    params: {slug}
-  }))
+    params: { slug },
+  }));
 
   return {
     paths: paths,
     fallback: true,
-  }
+  };
 }
 
 export async function getStaticProps({ params }) {
-  const query = `*[_type == "abouts" && slug.current == $slug] | order(date desc, _createdAt desc) {
-    _id,
+  const query = `*[_type == "abouts" && slug.current == $slug][0] {
     title,
     description,
-    slug,
     imgUrl,
   }`;
-  
+
   const abouts = await client.fetch(query, {
-    slug: params.slug
-  })
+    slug: params.slug,
+  });
 
   return {
     props: {
-      data: {
-        abouts,
-      },
+      abouts,
     },
     revalidate: 600,
-  }
+  };
 }
 
-export default function AboutPage({ data }) {
-  console.log(data);
+export default function AboutPage({ abouts }) {
+  const { title, description, imgUrl } = abouts;
   return (
-    <div className="mt-40 text-center text-2xl font-bold">
-      {data.abouts[0].title}
-      {data.abouts[0].description}
+    <div>
+      <div className="mt-40 text-center text-5xl font-bold">{title}</div>
+      <div className="mt-3 text-center text-xl font-bold">{description}</div>
       <img
-          className="relative h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
-          src={urlFor(data.abouts[0].imgUrl)}
-          alt={urlFor(data.abouts[0].imgUrl)}
+        className=" relative mx-auto mt-5 h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
+        src={urlFor(imgUrl)}
+        alt={urlFor(imgUrl)}
       />
     </div>
   );
 }
-
-
