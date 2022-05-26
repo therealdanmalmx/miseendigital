@@ -5,9 +5,12 @@ export async function getStaticPaths() {
   const query = '*[_type == "abouts" && defined(slug.current)][].slug.current';
 
   const abouts = await client.fetch(query);
+  const paths = abouts.map((slug) => ({
+    params: {slug}
+  }))
 
   return {
-    paths: abouts.map((slug) => ({params: {slug}})),
+    paths: paths,
     fallback: true,
   }
 }
@@ -18,7 +21,7 @@ export async function getStaticProps({ params }) {
     title,
     description,
     slug,
-    imgUrl
+    imgUrl,
   }`;
   
   const abouts = await client.fetch(query, {
