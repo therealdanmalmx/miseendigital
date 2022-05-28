@@ -59,7 +59,7 @@ const Navbar = () => {
                 onClick={() => setToggle(false)}
               />
               <ul className="">
-                {["Home", "About", "Services", "Our Work", "Contacts"].map(
+                {["Home", "Services", "Works", "Our Work", "Contacts"].map(
                   (item) => (
                     <Link
                       passHref
