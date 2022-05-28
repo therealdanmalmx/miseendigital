@@ -3,8 +3,18 @@ import { useRouter } from "next/router";
 import { urlFor } from "../../client";
 import Link from "next/link";
 
-export default function Services({ abouts }) {
-  const { title, description, imgUrl } = abouts;
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaStickerMule,
+  FaArrowLeft,
+  FaArrowRight,
+  FaChevronCircleRight,
+  FaChevronCircleLeft,
+} from "react-icons/fa";
+
+export default function Services({ services }) {
+  const { title, description, imgUrl } = services;
   const router = useRouter();
 
   if (router.isFallback) {
@@ -24,12 +34,10 @@ export default function Services({ abouts }) {
           alt={urlFor(imgUrl)}
         />
         <Link href="/services">
-          <button
-            type="button"
-            className="mt-5 bg-primary-color text-lg text-white transition duration-300 ease-in-out hover:bg-black hover:text-white"
-          >
-            Back to services
-          </button>
+          <FaChevronCircleLeft
+            fill="#4f15ed"
+            className="mt-4 h-10 w-10 cursor-pointer"
+          />
         </Link>
       </div>
     );

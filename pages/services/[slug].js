@@ -1,6 +1,5 @@
-import { urlFor, client } from "../../client";
-import { useRouter } from "next/router";
-import Abouts from "../../components/dynamic/Services";
+import { client } from "../../client";
+import Service from "../../components/dynamic/Service";
 
 export async function getStaticPaths() {
   const query = '*[_type == "abouts" && defined(slug.current)][].slug.current';
@@ -42,7 +41,7 @@ export async function getStaticProps({ params }) {
 export default function AboutPage({ abouts }) {
   return (
     <div>
-      <Abouts abouts={abouts} />
+      <Service services={abouts} />
     </div>
   );
 }
