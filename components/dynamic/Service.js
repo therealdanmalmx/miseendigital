@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { urlFor } from "../../client";
 import Link from "next/link";
+import Footer from "../Footer"
 
 import { FaChevronCircleLeft } from "react-icons/fa";
 
@@ -16,21 +17,27 @@ export default function Service({ services }) {
     );
   } else {
     return (
+      <>
       <div className="flex flex-col items-center justify-center">
-        <div className="mt-40 text-center text-5xl font-bold">{title}</div>
+        <Link href="/services">
+          <button
+            type="button"
+            className="mt-40 mb-10 bg-primary-color text-lg text-white transition duration-300 ease-in-out hover:bg-black hover:text-white"
+          >
+            Back to services
+          </button>
+        </Link>
+        <div className=" text-center text-5xl font-bold">{title}</div>
         <div className="mt-3 text-center text-xl font-bold">{description}</div>
         <img
-          className=" relative mx-auto mt-5 h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
+          className="mb-10 relative mx-auto mt-5 h-[400px] w-full object-cover transition duration-300 ease-in-out md:h-[600px] md:w-[1000px]"
           src={urlFor(imgUrl)}
           alt={urlFor(imgUrl)}
         />
-        <Link href="/services">
-          <FaChevronCircleLeft
-            fill="#4f15ed"
-            className="mt-4 h-10 w-10 cursor-pointer hover:contrast-200"
-          />
-        </Link>
       </div>
+
+      <Footer />
+      </>
     );
   }
 }
