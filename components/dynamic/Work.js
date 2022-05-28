@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { FaChevronCircleLeft } from "react-icons/fa";
 
-export default function Service({ services }) {
-  const { title, description, imgUrl } = services;
+export default function Work({ works }) {
+  const { title, description, projectLink, codeLink, imgUrl } = works;
   const router = useRouter();
 
   if (router.isFallback) {
@@ -19,6 +19,18 @@ export default function Service({ services }) {
       <div className="flex flex-col items-center justify-center">
         <div className="mt-40 text-center text-5xl font-bold">{title}</div>
         <div className="mt-3 text-center text-xl font-bold">{description}</div>
+        <Link
+          href={`${codeLink}`}
+          className="mt-3 text-center text-xl font-bold"
+        >
+          <a>Code link: {codeLink}</a>
+        </Link>
+        <Link
+          href={`${projectLink}`}
+          className="mt-3 text-center text-xl font-bold"
+        >
+          <a>Project link: {projectLink}</a>
+        </Link>
         <img
           className=" relative mx-auto mt-5 h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
           src={urlFor(imgUrl)}
