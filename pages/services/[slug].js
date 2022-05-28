@@ -1,6 +1,6 @@
 import { urlFor, client } from "../../client";
 import { useRouter } from "next/router";
-import Abouts from "../../components/Abouts";
+import Abouts from "../../components/dynamic/Services";
 
 export async function getStaticPaths() {
   const query = '*[_type == "abouts" && defined(slug.current)][].slug.current';
