@@ -36,7 +36,7 @@ export default function Work({ works }) {
           src={urlFor(imgUrl)}
           alt={urlFor(imgUrl)}
         />
-        <Link href="/services">
+        <Link href="/works">
           <FaChevronCircleLeft
             fill="#4f15ed"
             className="mt-4 h-10 w-10 cursor-pointer hover:contrast-200"
