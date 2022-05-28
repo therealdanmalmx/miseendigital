@@ -4,8 +4,10 @@ import { urlFor } from "../../client";
 import Link from "next/link";
 import Footer from "../Footer"
 
-export default function Services({ abouts }) {
-  const { title, description, imgUrl } = abouts;
+import { FaChevronCircleLeft } from "react-icons/fa";
+
+export default function Services({ services }) {
+  const { title, description, imgUrl } = services;
   const router = useRouter();
 
   if (router.isFallback) {
