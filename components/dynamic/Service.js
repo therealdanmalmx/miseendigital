@@ -3,15 +3,7 @@ import { useRouter } from "next/router";
 import { urlFor } from "../../client";
 import Link from "next/link";
 
-import {
-  FaChevronLeft,
-  FaChevronRight,
-  FaStickerMule,
-  FaArrowLeft,
-  FaArrowRight,
-  FaChevronCircleRight,
-  FaChevronCircleLeft,
-} from "react-icons/fa";
+import { FaChevronCircleLeft } from "react-icons/fa";
 
 export default function Services({ services }) {
   const { title, description, imgUrl } = services;
@@ -36,7 +28,7 @@ export default function Services({ services }) {
         <Link href="/services">
           <FaChevronCircleLeft
             fill="#4f15ed"
-            className="mt-4 h-10 w-10 cursor-pointer"
+            className="mt-4 h-10 w-10 cursor-pointer hover:contrast-200"
           />
         </Link>
       </div>
