@@ -1,11 +1,9 @@
-import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Works from "./works";
 import Skills from "./skills";
 import Testimonial from "./testimonials";
-import Services from "./works";
+import Services from "./services";
 import Contacts from "./contacts";
 
 export default function Home() {
