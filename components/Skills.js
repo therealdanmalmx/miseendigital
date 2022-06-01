@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import ReactToolTip from 'react-tooltip'
+import ReactToolTip from "react-tooltip";
 import { useState, useEffect } from "react";
-import { urlFor, client } from "../../client";
+import { urlFor, client } from "../client";
 
 const Skills = () => {
   const [experience, setExperience] = useState([]);
@@ -12,34 +12,40 @@ const Skills = () => {
     const skillsQuery = '*[_type == "skills"]';
 
     client.fetch(query).then((data) => {
-      setExperience(data); 
+      setExperience(data);
     });
 
     client.fetch(skillsQuery).then((data) => {
       setSkills(data);
     });
-
   }, []);
 
   console.log("experience", experience);
   console.log("skills", skills);
 
   return (
-    <div className="app__skills flex-1 w-full flex-col py-28">
+    <div className="app__skills w-full flex-1 flex-col py-28">
       <h1 className="app_skills-head-text my-10 w-full flex-1 flex-col text-center font-bold md:text-5xl">
         Skills and Experience
       </h1>
-      <div className="app__skills-container flex justify-center items-center">
+      <div className="app__skills-container flex items-center justify-center">
         <motion.div className="app__skills-list flex flex-wrap">
           {skills?.map((skill) => (
             <motion.div
-              whileInView={{opacity: [0,1]}}
-              transition={{duration: 0.5}}
-              className="app__skills-item flex flex-col flex-1 items-center justify-center mx-4"
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5 }}
+              className="app__skills-item mx-4 flex flex-1 flex-col items-center justify-center"
               key={skill.name}
             >
-              <div className="flex items-center w-[90px] h-[90px] justify-center rounded-full bg-white shadow-md" style={{backgroundColor: skill.bgColor}}>
-                <img className="w-1/2 h-1/2" src={urlFor(skill.icon)} alt={skill.name} />
+              <div
+                className="flex h-[90px] w-[90px] items-center justify-center rounded-full bg-white shadow-md"
+                style={{ backgroundColor: skill.bgColor }}
+              >
+                <img
+                  className="h-1/2 w-1/2"
+                  src={urlFor(skill.icon)}
+                  alt={skill.name}
+                />
               </div>
               <p className="mt-2 font-bold">{skill.name}</p>
             </motion.div>

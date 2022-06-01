@@ -1,16 +1,8 @@
 import { useState, useEffect } from "react";
-import { urlFor, client } from "../../client";
+import { urlFor, client } from "../client";
 import Image from "next/image";
 
-import {
-  FaChevronLeft,
-  FaChevronRight,
-  FaStickerMule,
-  FaArrowLeft,
-  FaArrowRight,
-  FaChevronCircleRight,
-  FaChevronCircleLeft,
-} from "react-icons/fa";
+import { FaChevronCircleRight, FaChevronCircleLeft } from "react-icons/fa";
 
 const Testimonial = () => {
   const [brands, setBrands] = useState([]);

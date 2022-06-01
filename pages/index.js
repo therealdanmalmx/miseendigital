@@ -1,8 +1,8 @@
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
+import Footer from "../components/base/Footer";
+import Hero from "../components/base/Hero";
 import Works from "./works";
-import Skills from "./skills";
-import Testimonial from "./testimonials";
+import Skills from "../components/Skills";
+import Testimonial from "../components/Testimonials";
 import Services from "./services";
 import Contacts from "./contacts";
 
