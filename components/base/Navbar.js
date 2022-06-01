@@ -61,7 +61,7 @@ const Navbar = () => {
                 onClick={() => setToggle(false)}
               />
               <ul className="">
-                {["Home", "Services", "Works", "Contacts"].map((item) => (
+                {["Home", "Services", "Works"].map((item) => (
                   <Link
                     passHref
                     href={item === "Home" ? "/" : `/${item.toLowerCase()}`}

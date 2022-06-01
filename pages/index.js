@@ -4,7 +4,7 @@ import Works from "./works";
 import Skills from "../components/home/Skills";
 import Testimonial from "../components/home/Testimonials";
 import Services from "./services";
-import Contacts from "./contacts";
+import Contacts from "../components/home/Contacts";
 
 export default function Home() {
   return (
