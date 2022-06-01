@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import ReactToolTip from "react-tooltip";
 import { useState, useEffect } from "react";
-import { urlFor, client } from "../client";
+import { urlFor, client } from "../../client";
 
 const Skills = () => {
   const [experience, setExperience] = useState([]);

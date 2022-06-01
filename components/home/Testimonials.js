@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { urlFor, client } from "../client";
+import { urlFor, client } from "../../client";
 import Image from "next/image";
 
 import { FaChevronCircleRight, FaChevronCircleLeft } from "react-icons/fa";
