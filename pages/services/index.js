@@ -5,7 +5,7 @@ import Link from "next/link";
 import { images } from "../../utils";
 import { urlFor, client } from "../../client";
 
-const About = () => {
+const Services = () => {
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
@@ -17,11 +17,11 @@ const About = () => {
   }, []);
 
   return (
-    <div className="app__about flex flex-col items-center justify-center py-28">
-      <h1 className="app__about-head-text mb-5 w-full flex-1 flex-col text-center font-bold md:text-5xl">
+    <div className="app__services flex flex-col items-center justify-center py-28">
+      <h1 className="app__services-head-text mb-5 w-full flex-1 flex-col text-center font-bold md:text-5xl">
         We help your business thrive
       </h1>
-      <p className="app__about-description-text mb-10 w-full px-7 text-center text-base md:w-6/12 md:text-lg">
+      <p className="app__services-description-text mb-10 w-full px-7 text-center text-base md:w-6/12 md:text-lg">
         Transforming business challenges into impactful web- and mobile
         solutions that people love to use every day
       </p>
@@ -55,14 +55,8 @@ const About = () => {
           </Link>
         ))}
       </div>
-      <button
-        type="button"
-        className="mt-5 bg-primary-color text-lg text-white transition duration-300 ease-in-out hover:bg-black hover:text-white"
-      >
-        See all services
-      </button>
     </div>
   );
 };
 
-export default About;
+export default Services;
