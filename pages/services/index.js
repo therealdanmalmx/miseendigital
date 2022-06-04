@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { images } from "../../utils";
 import { urlFor, client } from "../../client";
+import Footer from "../../components/base/Footer";
 
 const Services = () => {
   const [abouts, setAbouts] = useState([]);
@@ -67,6 +68,8 @@ const Services = () => {
         ))}
       </div>
     </div>
+
+    <Footer />
     </>
   );
 };

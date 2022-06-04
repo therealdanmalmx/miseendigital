@@ -17,6 +17,7 @@ const Services = () => {
   }, []);
 
   return (
+    <>
     <div className="app__services flex flex-col items-center justify-center py-28">
       <h1 className="app__services-head-text mb-5 w-full flex-1 flex-col text-center font-bold md:text-5xl">
         We help your business thrive
@@ -62,6 +63,7 @@ const Services = () => {
         See all services
       </button>
     </div>
+    </>
   );
 };
 

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { images } from "../../utils";
-import Footer from "../../components/base/Footer";
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -41,16 +40,6 @@ const Work = () => {
 
   return (
     <>
-    <div className="app__hero flex h-screen max-w-full flex-col items-start justify-center bg-secondary-color bg-cover bg-center" style={{backgroundImage: `url(${images.sample.src})`}}>
-      <h1 className="mb-4 pl-16 max-w-4xl text-left text-5xl font-bold leading-snug text-white md:text-7xl md:leading-tight">
-        <span className="text-white">Works</span>
-      </h1>
-      <p className="mb-8 pl-16 text-lg text-white text-left">
-      Lorem ipsum dolor sit amet, duo summo recteque repudiandae ea. Ea utinam accommodare pri, <br />
-      an duo explicari interesset theophrastus, eu munere nonumes delicatissimi duo. 
-      </p>
-    </div>
-
     <div className="app__works mt-12 bg-light-color py-28">
       <h1 className="app_about-head-text w-full flex-1 flex-col text-center font-bold md:text-5xl">
         Our Creative Portfolio
@@ -137,7 +126,6 @@ const Work = () => {
         ))}
       </motion.div>
     </div>
-    <Footer />
     </>
   );
 };
