@@ -43,7 +43,7 @@ const Contacts = () => {
         Get in touch with us
       </h1>
       {!isFormSubmitted ? (
-        <div className="app__contact-form flex w-full flex-col items-center">
+        <form className="app__contact-form flex w-full flex-col items-center">
           <div className="mb-4 flex w-full px-5 md:w-[50%]">
             <input
               className="w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
@@ -57,10 +57,11 @@ const Contacts = () => {
           <div className="mb-4 flex w-full px-5 md:w-[50%]">
             <input
               className="w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
-              type="text"
+              type="email"
               name="email"
               placeholder="Your email"
               value={email}
+              required
               onChange={handleChangeInput}
             />
           </div>
@@ -80,7 +81,7 @@ const Contacts = () => {
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
-        </div>
+        </form>
       ) : (
         <div>
           <h3>Thank you for getting in touch!</h3>
