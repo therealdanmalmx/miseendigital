@@ -32,7 +32,8 @@ module.exports = {
       'white': '#ffffff',
       'black': '#000000',
       'light-color': "#f9f9fc",
-      'grey-color': '#aaaaaa'
+      'grey-color': '#aaaaaa',
+      'warning-color': '#991B1E'
     },
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
