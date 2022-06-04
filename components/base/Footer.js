@@ -8,6 +8,15 @@ const company = [
   { title:'Testimonials', url:'/testimonials' }
 ];
 
+const services = [
+  { title:'Web Design', url:'/services/web-design' },
+  { title:'Mobile Development', url:'/services/mobile-development' },
+  { title:'Web Development', url:'/services/web-development' },
+  { title:'e-Commerce', url:'/services/e-commerce' },
+  { title:'Marketing Digital', url:'/services/marketing-digital' },
+  { title:'Branding', url:'/services/branding' }
+];
+
 const Footer = () => {
   return (
     <div className="app__footer bg-secondary-color px-10 py-40 grid grid-cols-1 md:grid-cols-4">
@@ -38,18 +47,11 @@ const Footer = () => {
             Services
           </h1>
         <ul>
-          {[
-            "Web Design",
-            "Mobile Development",
-            "Web Development",
-            "e-Commerce",
-            "Marketing Digital",
-            "Branding",
-          ].map((item) => (
+          {services.map((item) => (
             <li className="pb-3" key={item}>
-              <a className="cursor-pointer text-base font-normal hover:text-primary-color">
-                {item}
-              </a>
+              <Link href={item.url} className="cursor-pointer text-base font-normal hover:text-primary-color">
+                {item.title}
+              </Link>
             </li>
           ))}
         </ul>

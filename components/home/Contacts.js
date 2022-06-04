@@ -4,7 +4,6 @@ import Image from "next/image";
 import { images } from "../../utils";
 import { urlFor, client } from "../../client";
 import { FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
-import Footer from "../../components/base/Footer";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -41,36 +40,6 @@ const Contacts = () => {
 
   return (
     <>
-    <div className="app__hero flex h-screen max-w-full flex-col items-start justify-center bg-secondary-color bg-cover bg-center" style={{backgroundImage: `url(${images.sample.src})`}}>
-      <h1 className="mb-4 ml-16 max-w-4xl text-left text-5xl font-bold leading-snug text-white md:text-7xl md:leading-tight">
-        <span className="text-white">Contacts</span>
-      </h1>
-      <p className="mb-8 ml-16 text-lg text-white text-left">
-        Lorem ipsum dolor sit amet, duo summo recteque repudiandae ea. Ea utinam accommodare pri, <br />
-        an duo explicari interesset theophrastus, eu munere nonumes delicatissimi duo. 
-      </p>
-
-      <div className="flex">
-
-      <div className="ml-16 flex items-center">
-        <FaPhoneAlt className="text-white text-3xl mr-5"/>
-        <div className="flex flex-col">
-         <h6 className="text-white opacity-75 uppercase text-base mr-5">Phone</h6>
-         <p className="text-white text-2xl">912 658 932</p>
-        </div>
-      </div>
-
-      <div className="ml-16 flex items-center">
-        <FaRegEnvelope className="text-white text-3xl mr-5"/>
-        <div className="flex flex-col">
-         <h6 className="text-white opacity-75 uppercase text-base mr-5">E-MAIL</h6>
-         <p className="text-white text-2xl">geral@domain.com</p>
-        </div>
-      </div>
-      </div>
-
-    </div>
-
     <div className="app__contact w-full flex-1 flex-col py-28">
       <h1 className="app__contact-head-text mb-5 w-full flex-1 flex-col text-center font-bold md:text-5xl">
         Get in touch with us
@@ -121,7 +90,6 @@ const Contacts = () => {
         </div>
       )}
     </div>
-    <Footer />
     </>
   );
 };
