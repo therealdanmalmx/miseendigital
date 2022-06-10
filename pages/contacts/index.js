@@ -29,17 +29,27 @@ const Contacts = () => {
     console.log({ errorMessage });
     if (!formData.message) {
       setErrorMessage("A message is required");
-      document.querySelector("textarea").style.border = "2px solid #DC2638";
+      const message = document.querySelector("textarea");
+      message.style.border = "2px solid #DC2638";
+      message.addEventListener("keydown", () => {
+        clearErrorMessage();
+      });
     }
     if (!formData.email) {
       setErrorMessage("E-mail is required");
-      document.querySelector('input[name = "email"]').style.border =
-        "2px solid #DC2638";
+      const email = document.querySelector('input[name = "email"]');
+      email.style.border = "2px solid #DC2638";
+      email.addEventListener("keydown", () => {
+        clearErrorMessage();
+      });
     }
     if (!formData.name) {
       setErrorMessage("Your name is required");
-      document.querySelector('input[name = "name"]').style.border =
-        "2px solid #DC2638";
+      const name = document.querySelector('input[name = "name"]');
+      name.style.border = "2px solid #DC2638";
+      name.addEventListener("keydown", () => {
+        clearErrorMessage();
+      });
     }
     if (!formData.message && !formData.name && !formData.email) {
       document
