@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { images } from "../../utils";
 import { urlFor, client } from "../../client";
+// import { FaWindowClose } from "react-icons/fa";
+import { GrFormClose } from "react-icons/gr";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -36,11 +38,23 @@ const Contacts = () => {
       setErrorMessage("Your name makes you you. We'd love to know it");
     }
     if (!formData.message && !formData.name && !formData.email) {
+      document
+        .querySelectorAll("input")
+        .forEach((el) => (el.style.border = "2px solid #DC2638"));
+      document.querySelector("textarea").style.border = "2px solid #DC2638";
       setErrorMessage("Please fill in all required fields");
     }
     if (formData && formData.name && formData.email && formData.message) {
       handleSubmit();
     }
+  };
+
+  const clearErrorMessage = () => {
+    document
+      .querySelectorAll("input")
+      .forEach((el) => (el.style.border = "2px solid grey"));
+    document.querySelector("textarea").style.border = "2px solid grey";
+    setErrorMessage("");
   };
 
   console.log("formData", formData.name);
@@ -122,15 +136,16 @@ const Contacts = () => {
         </div>
       )}
       {errorMessage && (
-        <div className="easeInOut px-4 transition duration-1000">
-          <div className=" mx-auto mt-4 w-full rounded-xl bg-warning-color py-6 px-10 md:w-[50%]">
-            <p className="flex items-center justify-between pr-2 text-left text-xl text-white">
+        <div className="px-4 duration-1000 ease-in-out">
+          <div className="mx-auto mt-4 w-full rounded-xl bg-warning-color py-4 px-6 md:w-[50%] md:p-4">
+            <p className="text-l flex items-center justify-between pr-2 text-left text-white">
               {errorMessage}
               <span
-                className="cursor-pointer"
-                onClick={() => setErrorMessage("")}
+                className="cursor-pointer text-white"
+                onClick={() => clearErrorMessage("")}
               >
-                X
+                {/* <FaWindowClose className="h-6 w-6" /> */}
+                <GrFormClose className="decoration-white" />
               </span>
             </p>
           </div>

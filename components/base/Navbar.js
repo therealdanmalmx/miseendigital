@@ -32,7 +32,7 @@ const Navbar = () => {
             className={`mr-4 cursor-pointer text-3xl font-bold sm:text-4xl 
             ${isScrolled ? "text-black" : "text-white"}`}
           >
-            Brand.
+            mise|en|digital.
           </h1>
         </Link>
       </div>
