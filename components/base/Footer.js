@@ -34,12 +34,10 @@ const Footer = () => {
         <h1 className="mr-4 mb-4 text-base font-bold text-white">Services</h1>
         <ul>
           {[
-            "Web Design",
+            "UX / UI",
             "Mobile Development",
             "Web Development",
-            "e-Commerce",
-            "Marketing Digital",
-            "Branding",
+            "e-Commerce (incl. Shopify)",
           ].map((item) => (
             <li className="pb-3" key={item}>
               <a className="cursor-pointer text-base font-normal hover:text-primary-color">
