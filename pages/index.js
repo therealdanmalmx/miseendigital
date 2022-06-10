@@ -1,4 +1,3 @@
-import Footer from "../components/base/Footer";
 import Hero from "../components/base/Hero";
 import Works from "./works";
 import Skills from "../components/home/Skills";
@@ -15,7 +14,6 @@ export default function Home() {
       <Skills />
       <Testimonial />
       <Contacts />
-      <Footer />
     </div>
   );
 }

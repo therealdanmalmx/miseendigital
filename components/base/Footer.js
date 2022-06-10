@@ -50,7 +50,7 @@ const Footer = () => {
       <div className="app__footer-col-4">
         <h1 className="mr-4 mb-4 text-base font-bold text-white">Contacts</h1>
         <p className="text-grey-color">Tel. +351 912 658 932</p>
-        <p className="text-grey-color">geral@domain.com</p>
+        <p className="text-grey-color">whyhi@miseendigital.com</p>
         <button className="mt-7 transition duration-300 ease-in-out">
           Get in touch
         </button>
