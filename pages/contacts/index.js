@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { images } from "../../utils";
 import { urlFor, client } from "../../client";
-// import { FaWindowClose } from "react-icons/fa";
-import { GrFormClose } from "react-icons/gr";
+import { FaWindowClose } from "react-icons/fa";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -30,12 +29,17 @@ const Contacts = () => {
     console.log({ errorMessage });
     if (!formData.message) {
       setErrorMessage("A message is required");
+      document.querySelector("textarea").style.border = "2px solid #DC2638";
     }
     if (!formData.email) {
       setErrorMessage("E-mail is required");
+      document.querySelector('input[name = "email"]').style.border =
+        "2px solid #DC2638";
     }
     if (!formData.name) {
-      setErrorMessage("Your name makes you you. We'd love to know it");
+      setErrorMessage("Your name is required");
+      document.querySelector('input[name = "name"]').style.border =
+        "2px solid #DC2638";
     }
     if (!formData.message && !formData.name && !formData.email) {
       document
@@ -137,15 +141,14 @@ const Contacts = () => {
       )}
       {errorMessage && (
         <div className="px-4 duration-1000 ease-in-out">
-          <div className="mx-auto mt-4 w-full rounded-xl bg-warning-color py-4 px-6 md:w-[50%] md:p-4">
-            <p className="text-l flex items-center justify-between pr-2 text-left text-white">
+          <div className="mx-auto mt-4 w-full md:w-1/2 md:p-4">
+            <p className="underline-color flex items-center justify-between text-left text-xl leading-10 text-warning-color md:justify-center">
               {errorMessage}
               <span
                 className="cursor-pointer text-white"
                 onClick={() => clearErrorMessage("")}
               >
-                {/* <FaWindowClose className="h-6 w-6" /> */}
-                <GrFormClose className="decoration-white" />
+                <FaWindowClose className="h-6 w-6 text-warning-color md:ml-8" />
               </span>
             </p>
           </div>

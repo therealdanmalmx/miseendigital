@@ -40,56 +40,56 @@ const Contacts = () => {
 
   return (
     <>
-    <div className="app__contact w-full flex-1 flex-col py-28">
-      <h1 className="app__contact-head-text mb-5 w-full flex-1 flex-col text-center font-bold md:text-5xl">
-        Get in touch with us
-      </h1>
-      {!isFormSubmitted ? (
-        <form className="app__contact-form flex w-full flex-col items-center">
-          <div className="mb-4 flex w-full px-5 md:w-[50%]">
-            <input
-              className="w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={name}
-              onChange={handleChangeInput}
-            />
+      <div className="app__contact w-full flex-1 flex-col py-28">
+        <h1 className="app__contact-head-text mb-5 w-full flex-1 flex-col text-center font-bold md:text-5xl">
+          Get in touch with us
+        </h1>
+        {!isFormSubmitted ? (
+          <form className="app__contact-form flex w-full flex-col items-center">
+            <div className="mb-4 flex w-full px-5 md:w-[50%]">
+              <input
+                className="w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={name}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div className="mb-4 flex w-full px-5 md:w-[50%]">
+              <input
+                className="w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
+                type="email"
+                name="email"
+                placeholder="Your email"
+                value={email}
+                required
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div className="flex w-full px-5 md:w-[50%]">
+              <textarea
+                className="h-[150px] w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
+                placeholder="Your Message"
+                value={message}
+                name="message"
+                onChange={handleChangeInput}
+              />
+            </div>
+            <button
+              type="button"
+              className="mt-5 w-full bg-primary-color p-4 text-lg text-white transition duration-300 ease-in-out hover:bg-black hover:text-white"
+              onClick={handleSubmit}
+            >
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        ) : (
+          <div>
+            <h3>Thank you for getting in touch!</h3>
           </div>
-          <div className="mb-4 flex w-full px-5 md:w-[50%]">
-            <input
-              className="w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
-              type="email"
-              name="email"
-              placeholder="Your email"
-              value={email}
-              required
-              onChange={handleChangeInput}
-            />
-          </div>
-          <div className="flex w-full px-5 md:w-[50%]">
-            <textarea
-              className="h-[150px] w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
-              placeholder="Your Message"
-              value={message}
-              name="message"
-              onChange={handleChangeInput}
-            />
-          </div>
-          <button
-            type="button"
-            className="mt-5 bg-primary-color text-lg text-white transition duration-300 ease-in-out hover:bg-black hover:text-white"
-            onClick={handleSubmit}
-          >
-            {loading ? "Sending..." : "Send Message"}
-          </button>
-        </form>
-      ) : (
-        <div>
-          <h3>Thank you for getting in touch!</h3>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
     </>
   );
 };
