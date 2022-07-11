@@ -37,8 +37,6 @@ export default function Service({ services }) {
             alt={urlFor(imgUrl)}
           />
         </div>
-
-        <Footer />
       </>
     );
   }
