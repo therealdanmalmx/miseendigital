@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { urlFor, client } from "../../client";
 import Image from "next/image";
 
-import { FaChevronCircleRight, FaChevronCircleLeft } from "react-icons/fa";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 const Testimonial = () => {
   const [brands, setBrands] = useState([]);
@@ -47,14 +47,14 @@ const Testimonial = () => {
                   </div>
                   <div className="flex flex-col justify-around p-4">
                     <div>
-                      <div className="text-2xl font-semibold uppercase tracking-wide text-primary-color ">
+                      <div className="text-2xl font-bold capitalize tracking-wide text-primary-color ">
                         {testimonial.name}
                       </div>
-                      <p className="mt-1 block text-xl font-medium leading-tight text-black">
+                      <p className="mt-1 mb-3 block text-xl font-medium leading-tight text-black">
                         {testimonial.company}
                       </p>
                     </div>
-                    <p className="text-md mb-6 text-black  md:text-sm ">
+                    <p className="text-md mb-6 text-black md:text-sm md:leading-6 ">
                       {testimonial.feedback}
                     </p>
                   </div>
@@ -73,14 +73,14 @@ const Testimonial = () => {
                   </div>
                   <div className="flex flex-col justify-between p-4 md:justify-around">
                     <div>
-                      <div className="text-2xl font-semibold uppercase tracking-wide text-primary-color ">
+                      <div className="text-2xl font-bold capitalize tracking-wide text-primary-color ">
                         {testimonialSecond.name}
                       </div>
-                      <p className="block text-xl font-medium leading-tight text-black">
+                      <p className="block mb-3 text-xl font-medium leading-tight text-black">
                         {testimonialSecond.company}
                       </p>
                     </div>
-                    <p className="text-md mb-0 text-black md:mb-6  md:text-sm ">
+                    <p className="text-md mb-0 text-black md:mb-6  md:text-sm md:leading-6">
                       {testimonialSecond.feedback}
                     </p>
                   </div>
@@ -99,7 +99,7 @@ const Testimonial = () => {
                 )
               }
             >
-              <FaChevronCircleLeft fill="#4f15ed" className="h-6 w-6" />
+              <HiChevronLeft fill="#4f15ed" className="h-10 w-10" />
             </span>
             <span
               className="px-4"
@@ -111,7 +111,7 @@ const Testimonial = () => {
                 )
               }
             >
-              <FaChevronCircleRight fill="#4f15ed" className="h-6 w-6" />
+              <HiChevronRight fill="#4f15ed" className="h-10 w-10" />
             </span>
           </div>
         </>

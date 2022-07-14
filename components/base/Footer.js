@@ -12,6 +12,12 @@ const company = [
   { title: "Testimonials", url: "/testimonials" },
 ];
 
+const services = [
+  { title: "UX/UI", url: "/services/web-design"},
+  { title: "Web Development", url: "/services/web-development" },
+  { title: "e-Commerce (incl. Shopify)", url: "/services/e-commerce" },
+];
+
 const Footer = () => {
   return (
     <div className="app__footer grid grid-cols-1 bg-secondary-color px-10 py-40 md:grid-cols-4">
@@ -32,16 +38,13 @@ const Footer = () => {
       <div className="app__footer-col-3 xxs:mb-6 xs:mb-6 sm:mb-6">
         <h1 className="mr-4 mb-4 text-base font-bold text-white">Services</h1>
         <ul>
-          {[
-            "UX / UI",
-            "Mobile Development",
-            "Web Development",
-            "e-Commerce (incl. Shopify)",
-          ].map((item) => (
+          {services.map((item) => (
             <li className="pb-3" key={item}>
-              <a className="cursor-pointer text-base font-normal hover:text-primary-color">
-                {item}
-              </a>
+              <Link href={item.url}>
+                <a className="cursor-pointer text-base font-normal hover:text-primary-color">
+                  {item.title}
+                </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -66,9 +69,6 @@ const Footer = () => {
           </p>
         </div>
         <div className="mt-2 mb-10">
-          <a className="mr-4 text-xs" href="">
-            Terms and conditions
-          </a>
           <a className="text-xs" href="">
             Privacy Policy
           </a>
