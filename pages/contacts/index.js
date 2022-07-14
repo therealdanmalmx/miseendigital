@@ -91,6 +91,16 @@ const Contacts = () => {
   };
 
   return (
+    <>
+    <div className="app__hero flex h-screen max-w-full flex-col items-start justify-center bg-secondary-color bg-cover bg-center" style={{backgroundImage: `url(${images.sample.src})`}}>
+      <h1 className="mb-4 pl-16 max-w-4xl text-left text-5xl font-bold leading-snug text-white md:text-7xl md:leading-tight">
+        <span className="text-white">Contacts</span>
+      </h1>
+      <p className="mb-8 pl-16 text-lg text-white text-left">
+      Lorem ipsum dolor sit amet, duo summo recteque repudiandae ea. Ea utinam accommodare pri, <br />
+      an duo explicari interesset theophrastus, eu munere nonumes delicatissimi duo. 
+      </p>
+    </div>
     <div className="app__contact w-full flex-1 flex-col py-28">
       <h1 className="app__contact-head-text mb-5 flex-1 flex-col text-center font-bold md:text-5xl">
         Get in touch with us
@@ -165,6 +175,7 @@ const Contacts = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
