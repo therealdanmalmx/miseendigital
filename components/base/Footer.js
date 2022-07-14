@@ -1,5 +1,4 @@
 import {
-  FaFacebookF,
   FaInstagram,
   FaTwitter,
   FaLinkedinIn,
@@ -75,12 +74,6 @@ const Footer = () => {
           </a>
         </div>
         <div className="app__footer-social flex">
-          <a
-            href=""
-            className="mr-2 flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-white"
-          >
-            <FaFacebookF className="text-secondary-color" />
-          </a>
           <a
             href=""
             className="mr-2 flex w-6 cursor-pointer items-center justify-center rounded-full bg-white marker:h-6"
