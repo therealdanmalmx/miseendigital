@@ -1,5 +1,4 @@
 import {
-  FaFacebookF,
   FaInstagram,
   FaTwitter,
   FaLinkedinIn,
@@ -11,6 +10,12 @@ const company = [
   { title: "Portfolio", url: "/work" },
   { title: "Clients", url: "/clients" },
   { title: "Testimonials", url: "/testimonials" },
+];
+
+const services = [
+  { title: "UX/UI", url: "/services/web-design"},
+  { title: "Web Development", url: "/services/web-development" },
+  { title: "e-Commerce (incl. Shopify)", url: "/services/e-commerce" },
 ];
 
 const Footer = () => {
@@ -33,16 +38,13 @@ const Footer = () => {
       <div className="app__footer-col-3 xxs:mb-6 xs:mb-6 sm:mb-6">
         <h1 className="mr-4 mb-4 text-base font-bold text-white">Services</h1>
         <ul>
-          {[
-            "UX / UI",
-            "Mobile Development",
-            "Web Development",
-            "e-Commerce (incl. Shopify)",
-          ].map((item) => (
+          {services.map((item) => (
             <li className="pb-3" key={item}>
-              <a className="cursor-pointer text-base font-normal hover:text-primary-color">
-                {item}
-              </a>
+              <Link href={item.url}>
+                <a className="cursor-pointer text-base font-normal hover:text-primary-color">
+                  {item.title}
+                </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -75,12 +77,6 @@ const Footer = () => {
           </a>
         </div>
         <div className="app__footer-social flex">
-          <a
-            href=""
-            className="mr-2 flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-white"
-          >
-            <FaFacebookF className="text-secondary-color" />
-          </a>
           <a
             href=""
             className="mr-2 flex w-6 cursor-pointer items-center justify-center rounded-full bg-white marker:h-6"

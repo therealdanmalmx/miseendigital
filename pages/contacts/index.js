@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { images } from "../../utils";
 import { urlFor, client } from "../../client";
-import { FaWindowClose } from "react-icons/fa";
+import { HiOutlineX } from "react-icons/hi";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +14,12 @@ const Contacts = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+
+  const [checked, setChecked] = useState(false);
+
+  const handleChange = () => {
+    setChecked(!checked)
+  }
 
   const { name, email, message } = formData;
 
@@ -91,6 +97,17 @@ const Contacts = () => {
   };
 
   return (
+    <>
+    <div className="app__hero flex h-screen max-w-full flex-col items-start justify-center bg-secondary-color bg-cover bg-center" style={{backgroundImage: `url(${images.sample.src})`}}>
+      <h1 className="mb-4 pl-16 max-w-4xl text-left text-5xl font-bold leading-snug text-white md:text-7xl md:leading-tight">
+        <span className="text-white">Contacts</span>
+      </h1>
+      <p className="mb-8 pl-16 text-lg text-white text-left">
+      Lorem ipsum dolor sit amet, duo summo recteque repudiandae ea. Ea utinam accommodare pri, <br />
+      an duo explicari interesset theophrastus, eu munere nonumes delicatissimi duo. 
+      </p>
+    </div>
+
     <div className="app__contact w-full flex-1 flex-col py-28">
       <h1 className="app__contact-head-text mb-5 flex-1 flex-col text-center font-bold md:text-5xl">
         Get in touch with us
@@ -136,6 +153,17 @@ const Contacts = () => {
               onChange={handleChangeInput}
             />
           </div>
+          <div className="flex w-full px-4 md:w-[50%] mt-3 mb-3">
+            <label className="flex">
+                <input 
+                  type="checkbox" 
+                  className="w-5 h-5"
+                  checked={checked}
+                  onChange={handleChange}
+                />
+                <p className="pl-2">I have read and accept the privacy policy</p>
+            </label>
+          </div>
           <button
             type="submit"
             className="mt-5 bg-primary-color text-lg text-white transition duration-300 ease-in-out hover:bg-black hover:text-white"
@@ -152,19 +180,20 @@ const Contacts = () => {
       {errorMessage && (
         <div className="px-4 duration-1000 ease-in-out">
           <div className="mx-auto mt-4 w-full md:w-1/2 md:p-4">
-            <p className="underline-color flex items-center justify-between text-left text-xl leading-10 text-warning-color md:justify-center">
+            <p className="relative underline-color flex items-center justify-between text-left text-xl leading-10 bg-warning-color text-white md:justify-center">
               {errorMessage}
               <span
-                className="cursor-pointer text-white"
+                className="cursor-pointer text-white absolute right-4"
                 onClick={() => clearErrorMessage("")}
               >
-                <FaWindowClose className="h-6 w-6 text-warning-color md:ml-8" />
+                <HiOutlineX className="h-6 w-6 text-white md:ml-8" />
               </span>
             </p>
           </div>
         </div>
       )}
     </div>
+    </>
   );
 };
 
