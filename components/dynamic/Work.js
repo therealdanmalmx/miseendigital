@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { urlFor } from "../../client";
 import Link from "next/link";
 
-import { FaChevronCircleLeft } from "react-icons/fa";
+import { HiOutlineChevronLeft } from "react-icons/hi";
 
 export default function Work({ works }) {
   const { title, description, projectLink, codeLink, imgUrl } = works;
@@ -16,33 +16,39 @@ export default function Work({ works }) {
     );
   } else {
     return (
-      <div className="flex flex-col items-center justify-center">
-        <div className="mt-40 text-center text-5xl font-bold">{title}</div>
-        <div className="mt-3 text-center text-xl font-bold">{description}</div>
-        <Link
-          href={`${codeLink}`}
-          className="mt-3 text-center text-xl font-bold"
-        >
-          <a>Code link: {codeLink}</a>
-        </Link>
-        <Link
-          href={`${projectLink}`}
-          className="mt-3 text-center text-xl font-bold"
-        >
-          <a>Project link: {projectLink}</a>
-        </Link>
-        <img
-          className=" relative mx-auto mt-5 h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
-          src={urlFor(imgUrl)}
-          alt={urlFor(imgUrl)}
-        />
-        <Link href="/works">
-          <FaChevronCircleLeft
-            fill="#4f15ed"
-            className="mt-4 h-10 w-10 cursor-pointer hover:contrast-200"
+      <div className="w-full px-20 pt-40 mx-auto">
+        <div className="text-left flex items-center mb-10 hover:text-primary-color">
+          <HiOutlineChevronLeft className="w-6 h-6"/>
+            <Link href="/services"> 
+              <a
+                className="text-lg text-black transition duration-300 ease-in-out hover:text-primary-color"
+              >
+                Back to services
+              </a>
+          </Link>
+        </div>
+        <div className="flex flex-col">
+          <div className="text-5xl font-bold">{title}</div>
+          <div className="mt-3 text-xl font-bold">{description}</div>
+          <Link
+            href={`${codeLink}`}
+            className="mt-3 text-center text-xl font-bold"
+          >
+            <a>Code link: {codeLink}</a>
+          </Link>
+          <Link
+            href={`${projectLink}`}
+            className="mt-3 text-center text-xl font-bold"
+          >
+            <a>Project link: {projectLink}</a>
+          </Link>
+          <img
+            className=" relative mx-auto mt-5 h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
+            src={urlFor(imgUrl)}
+            alt={urlFor(imgUrl)}
           />
-        </Link>
-      </div>
+        </div>
+        </div>
     );
   }
 }
