@@ -3,7 +3,7 @@ import { urlFor } from "../../client";
 import Link from "next/link";
 import Footer from "../base/Footer";
 
-import { FaChevronCircleLeft } from "react-icons/fa";
+import { HiOutlineChevronLeft } from "react-icons/hi";
 
 export default function Service({ services }) {
   const { title, description, imgUrl } = services;
@@ -17,27 +17,29 @@ export default function Service({ services }) {
     );
   } else {
     return (
-      <>
-        <div className="flex flex-col items-center justify-center">
-          <Link href="/services">
-            <button
-              type="button"
-              className="mt-40 mb-10 bg-primary-color text-lg text-white transition duration-300 ease-in-out hover:bg-black hover:text-white"
-            >
-              Back to services
-            </button>
+      <div className="w-full px-20 pt-40 mx-auto">
+        <div className="text-left flex items-center mb-10 hover:text-primary-color">
+          <HiOutlineChevronLeft className="w-6 h-6"/>
+            <Link href="/services"> 
+              <a
+                className="text-lg text-black transition duration-300 ease-in-out hover:text-primary-color"
+              >
+                Back to services
+              </a>
           </Link>
-          <div className=" text-center text-5xl font-bold">{title}</div>
-          <div className="mt-3 text-center text-xl font-bold">
+        </div>
+        <div className="ring-offset-8 flex flex-col justify-center">
+          <div className="text-left text-5xl font-bold">{title}</div>
+          <div className="mt-3 text-left text-xl font-normal">
             {description}
           </div>
           <img
-            className="relative mx-auto mb-10 mt-5 h-[400px] w-full object-cover transition duration-300 ease-in-out md:h-[600px] md:w-[1000px]"
+            className="relative mb-10 mt-5 h-[400px] w-full object-cover transition duration-300 ease-in-out md:h-[800px] md:w-[1200px]"
             src={urlFor(imgUrl)}
             alt={urlFor(imgUrl)}
           />
         </div>
-      </>
+      </div>
     );
   }
 }
