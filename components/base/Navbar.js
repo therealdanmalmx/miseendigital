@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { images } from "../../utils";
+import Image from 'next/image'
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -28,12 +30,19 @@ const Navbar = () => {
     >
       <div className="app__navbar-logo flex items-center justify-start ">
         <Link href="/">
-          <h1
-            className={`mr-4 cursor-pointer text-3xl font-bold sm:text-4xl 
-            ${isScrolled ? "text-black" : "text-white"}`}
-          >
-            mise|en|digital.
-          </h1>
+          {isScrolled ?
+            <Image 
+              src={images.logoBlack} 
+              width={250}
+              height={31}
+            />
+          :
+            <Image 
+              src={images.logoWhite} 
+              width={250}
+              height={31}
+            />
+          }
         </Link>
       </div>
       <div className="flex items-center">
