@@ -4,6 +4,8 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import Link from "next/link";
+import { images } from "../../utils";
+import Image from 'next/image'
 
 const company = [
   { title: "About us", url: "/about" },
@@ -58,14 +60,16 @@ const Footer = () => {
         </button>
       </div>
       <div className="app__footer-col-1 mt-10 min-w-max sm:order-last md:order-first md:mt-0">
-        <div className="app__footer-logo flex items-center justify-start ">
-          <h1 className="mr-4 mb-4 text-3xl font-bold text-white">
-            mise|en|digital.
-          </h1>
+        <div className="app__footer-logo flex items-center justify-start pb-2">
+            <Image 
+              src={images.logoWhite} 
+              width={250}
+              height={31}
+            />
         </div>
         <div className="app__footer-brand">
           <p className="text-white">
-            ©{new Date().getFullYear()} mise|en|digital.
+            ©{new Date().getFullYear()} All rights reserved.
           </p>
         </div>
         <div className="mt-2 mb-10">
