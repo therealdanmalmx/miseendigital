@@ -118,7 +118,7 @@ export default function PrivacyPolicy() {
             <p className="mt-2">We generally only use your personal data within our company.</p>
             <p className="mt-2">If and to the extent that we involve third parties in the performance of contracts (e.g. logistics service providers), they only receive the personal data to the extent that such transfer is required for delivery of the relevant services.</p>
             <p className="mt-2">In the event that we outsource certain parts of the data processing (contractual processing), we contractually obligate the processor to use personal data only in accordance with the requirements of the data protection laws and to ensure the protection of the affected individual’s rights.</p>
-            <p className="mt-2 mb-4">A data transfer to bodies or individuals located in non-EU countries, with the exception of those mentioned in clause 2.3 of this Privacy Policy, does not occur and is not planned.</p>
+            <p className="mt-2 mb-20">A data transfer to bodies or individuals located in non-EU countries, with the exception of those mentioned in clause 2.3 of this Privacy Policy, does not occur and is not planned.</p>
           </div>
       </div>
 

@@ -1,6 +1,5 @@
 import Hero from "../components/base/Hero";
 import Works from "./works";
-import Skills from "../components/home/Skills";
 import Testimonial from "../components/home/Testimonials";
 import Services from "../components/home/Services";
 import Contacts from "../components/home/contacts";

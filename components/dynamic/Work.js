@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
 import { urlFor } from "../../client";
 import Link from "next/link";
+import Image from "next/image";
 
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
 export default function Work({ works }) {
-  const { title, description, projectLink, codeLink, imgUrl } = works;
+  const { title, description, projectLink, imgUrl } = works;
   const router = useRouter();
 
   if (router.isFallback) {
@@ -19,23 +20,17 @@ export default function Work({ works }) {
       <div className="w-full px-20 pt-40 mx-auto">
         <div className="text-left flex items-center mb-10 hover:text-primary-color">
           <HiOutlineChevronLeft className="w-6 h-6"/>
-            <Link href="/services"> 
+            <Link href="/works">
               <a
                 className="text-lg text-black transition duration-300 ease-in-out hover:text-primary-color"
               >
-                Back to services
+                Back to works
               </a>
           </Link>
         </div>
         <div className="flex flex-col">
           <div className="text-5xl font-bold">{title}</div>
           <div className="mt-3 text-xl font-bold">{description}</div>
-          <Link
-            href={`${codeLink}`}
-            className="mt-3 text-center text-xl font-bold"
-          >
-            <a>Code link: {codeLink}</a>
-          </Link>
           <Link
             href={`${projectLink}`}
             className="mt-3 text-center text-xl font-bold"
