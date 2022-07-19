@@ -61,10 +61,11 @@ const Footer = () => {
       </div>
       <div className="app__footer-col-1 mt-10 min-w-max sm:order-last md:order-first md:mt-0">
         <div className="app__footer-logo flex items-center justify-start pb-2">
-            <Image 
-              src={images.logoWhite} 
+            <Image
+              src={images.logoWhite}
               width={250}
               height={31}
+              alt={images.logoWhite}
             />
         </div>
         <div className="app__footer-brand">
@@ -73,9 +74,6 @@ const Footer = () => {
           </p>
         </div>
         <div className="mt-2 mb-10">
-          <a className="mr-4 text-xs" href="">
-            Terms and conditions
-          </a>
           <a className="text-xs" href="/privacy_policy">
             Privacy Policy
           </a>
