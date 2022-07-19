@@ -9,7 +9,7 @@ const Services = () => {
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
+    const query = '*[_type == "services"]';
 
     client.fetch(query).then((data) => {
       setAbouts(data);

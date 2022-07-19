@@ -139,7 +139,7 @@ const Contacts = () => {
           </div>
           <button
             type="submit"
-            className="mt-5 bg-primary-color text-lg text-white transition duration-300 ease-in-out hover:bg-black hover:text-white"
+            className="mt-5 bg-black text-lg text-white transition duration-300 ease-in-out"
             // onClick={handleSubmit}
           >
             {loading ? "Sending..." : "Send Message"}

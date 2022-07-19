@@ -45,7 +45,7 @@ const  WorkPage = ({ work }) => {
                 </div>
                 </Link>
                 <div className="app__work-content relative flex flex-col items-center justify-center py-4">
-                    <h4 className="bold-text font-bold text-primary-color">
+                    <h4 className="bold-text font-bold text-black">
                     {work.title}
                     </h4>
                     <p className="text-center" style={{ marginTop: 10 }}>
