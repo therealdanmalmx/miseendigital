@@ -15,7 +15,7 @@ const  WorkPage = ({ work }) => {
             animate={animateCard}
             transition={{ duration: 0.5 }}
             className="app__work-portfolio"
-            >
+        >
                 <Link
                     passHref
                     href={`/works/${work.title.toLowerCase().split(" ").join("-")}`}
@@ -59,7 +59,6 @@ const  WorkPage = ({ work }) => {
                     <p className="">{work.tags[0]}</p>
                     </div>
                 </div>
-            </div>
         </motion.div>
     </div>
   )
