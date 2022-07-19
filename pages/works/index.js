@@ -51,13 +51,12 @@ const Works = () => {
         )}
       </div>
 
-      <div className="app__work-portfolio flex w-full flex-1 flex-row flex-wrap items-center justify-center">
+      <div className="app__work-portfolio flex flex-nowrap justify-center">
         {filterWork.map((work) => (
           <div key={work._id}>
             <WorkPage work={work} />
           </div>
         ))}
-
       </div>
     </div>
   );
