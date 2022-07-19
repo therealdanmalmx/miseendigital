@@ -6,11 +6,11 @@
 
 @layer base {
   button {
-    @apply bg-primary-color text-white text-xl font-bold py-4 px-10
+    @apply bg-black text-white text-xl font-bold py-4 px-10 rounded-full
   }
 
   button:hover {
-    @apply bg-white text-primary-color
+    @apply bg-primary-color text-white
   }
 
   h1 {

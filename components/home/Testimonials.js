@@ -47,7 +47,7 @@ const Testimonial = () => {
                   </div>
                   <div className="flex flex-col justify-around p-4">
                     <div>
-                      <div className="text-2xl font-bold capitalize tracking-wide text-primary-color ">
+                      <div className="text-2xl font-bold capitalize tracking-wide text-black">
                         {testimonial.name}
                       </div>
                       <p className="mt-1 mb-3 block text-xl font-medium leading-tight text-black">
@@ -73,7 +73,7 @@ const Testimonial = () => {
                   </div>
                   <div className="flex flex-col justify-between p-4 md:justify-around">
                     <div>
-                      <div className="text-2xl font-bold capitalize tracking-wide text-primary-color ">
+                      <div className="text-2xl font-bold capitalize tracking-wide text-black ">
                         {testimonialSecond.name}
                       </div>
                       <p className="block mb-3 text-xl font-medium leading-tight text-black">
@@ -99,7 +99,7 @@ const Testimonial = () => {
                 )
               }
             >
-              <HiChevronLeft fill="#4f15ed" className="h-10 w-10" />
+              <HiChevronLeft className="h-10 w-10 hover:text-primary-color" />
             </span>
             <span
               className="px-4"
@@ -111,7 +111,7 @@ const Testimonial = () => {
                 )
               }
             >
-              <HiChevronRight fill="#4f15ed" className="h-10 w-10" />
+              <HiChevronRight className="h-10 w-10 hover:text-primary-color" />
             </span>
           </div>
         </>

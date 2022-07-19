@@ -9,7 +9,7 @@ const Services = () => {
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
+    const query = '*[_type == "services"]';
 
     client.fetch(query).then((data) => {
       setAbouts(data);
@@ -56,10 +56,7 @@ const Services = () => {
         ))}
       </div>
       <Link href="/services">
-        <button
-          type="button"
-          className="mt-5 bg-primary-color text-lg text-white transition duration-300 ease-in-out hover:bg-black hover:text-white"
-        >
+        <button className="mt-10 duration-300 ease-in-out">
           See all services
         </button>
       </Link>
