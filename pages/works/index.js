@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { client } from "../../client";
-import Image from "next/image";
 import WorkPage from '../../components/pages/WorkPage'
 
 const Works = () => {
@@ -53,7 +52,7 @@ const Works = () => {
       </div>
 
       <div className="app__work-portfolio flex w-full flex-1 flex-row flex-wrap items-center justify-center">
-        {filterWork.map((work, index) => (
+        {filterWork.map((work) => (
           <div key={work._id}>
             <WorkPage work={work} />
           </div>
