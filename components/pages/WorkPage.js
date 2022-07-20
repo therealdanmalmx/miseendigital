@@ -17,7 +17,7 @@ const  WorkPage = ({ work }) => {
         >
             <div className="app__work-img relative">
                 <img
-                    className="h-5/6 w-5/6 mx-10 my-5 object-contain"
+                    className="w-96 h-96 my-5 mx-2 object-cover"
                     src={urlFor(imgUrl)}
                     alt={work.name}
                 />
@@ -28,7 +28,7 @@ const  WorkPage = ({ work }) => {
                     ease: "easeInOut",
                     staggerChildren: 0.5,
                     }}
-                    className="app__work-hover absolute inset-0 bottom-0 ml-10 cursor-pointer right-0 w-5/6 rounded bg-black bg-opacity-40 duration-300 ease-in"
+                    className="app__work-hover absolute inset-0 bottom-0 ml-2 cursor-pointer right-0 w-96 rounded bg-black bg-opacity-40 duration-300 ease-in"
                 >
                 </motion.div>
                 <div key={work._id}>
