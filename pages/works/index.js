@@ -6,6 +6,7 @@ const Works = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setactiveFilter] = useState("All");
+  const [animateCard, setanimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -36,7 +37,7 @@ const Works = () => {
       <h1 className="app_about-head-text w-full flex-1 flex-col text-center font-bold md:text-5xl">
         Our Creative Portfolio
       </h1>
-      <div className="app__work-filter my-10 flex flex-wrap justify-center">
+      <div className="app__work-filter my-8 flex flex-wrap justify-center">
         {["All", "UX/UI", "Web Development", "E-commerce"].map(
           (item) => (
             <div
@@ -51,12 +52,14 @@ const Works = () => {
         )}
       </div>
 
-      <div className="app__work-portfolio flex flex-wrap justify-center">
-        {filterWork.map((work) => (
-          <div key={work._id}>
-            <WorkPage work={work} />
-          </div>
-        ))}
+      <div className="flex justify-center">
+        <div className="app__work-portfolio grid gap-6 justify-items-center lg:grid-cols-2 grid-cols-1">
+          {filterWork.map((work) => (
+            <div key={work._id}>
+              <WorkPage work={work} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
