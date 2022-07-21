@@ -17,7 +17,7 @@ const  WorkPage = ({ work }) => {
         >
             <div className="app__work-img relative">
                 <img
-                    className="w-[28rem] h-72 my-5 mx-2 object-cover"
+                    className="w-[28rem] h-72 object-cover"
                     src={urlFor(imgUrl)}
                     alt={work.name}
                 />
@@ -28,12 +28,12 @@ const  WorkPage = ({ work }) => {
                     ease: "easeInOut",
                     staggerChildren: 0.5,
                     }}
-                    className="app__work-hover absolute inset-0 bottom-0 ml-2 cursor-pointer right-0 w-96 rounded bg-black bg-opacity-40 duration-300 ease-in"
+                    className="app__work-hover absolute inset-0 bottom-0 ml-2 cursor-pointer right-0 w-[28rem] rounded bg-black bg-opacity-40 duration-300 ease-in"
                 >
                 </motion.div>
                 <div key={work._id}>
                     <div>
-                        <p className="top-20 left-16 absolute" style={{ marginTop: 10 }}>
+                        <p className="top-14 text-white left-6 absolute" style={{ marginTop: 10 }}>
                             {work.description}
                         </p>
                         <div className="app__work-tag absolute top-4 left-6 bg-white py-2 px-4 text-base">
