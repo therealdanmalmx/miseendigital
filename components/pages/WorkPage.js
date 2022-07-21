@@ -17,20 +17,20 @@ const  WorkPage = ({ work }) => {
         >
             <div className="app__work-img relative">
                 <img
-                    className="w-[28rem] h-72 object-cover"
+                    className="sm:w-[36rem] w-[22rem] lg:w-[30rem] lg:h-72 h-60 sm:h-96 object-cover"
                     src={urlFor(imgUrl)}
                     alt={work.name}
                 />
-                <motion.div
-                    whileHover={{ opacity: [0, 1] }}
-                    transition={{
-                    duration: 0.25,
-                    ease: "easeInOut",
-                    staggerChildren: 0.5,
+                <motion.img
+                    animate={{
+                        x: 0,
+                        y: 0,
+                        scale: 1.2,
+                        rotate: 0,
                     }}
-                    className="app__work-hover absolute inset-0 bottom-0 ml-2 cursor-pointer right-0 w-[28rem] rounded bg-black bg-opacity-40 duration-300 ease-in"
+                    className="app__work-hover scale-110 duration-300 ease-in"
                 >
-                </motion.div>
+                </motion.img>
                 <div key={work._id}>
                     <div>
                         <p className="top-14 text-white left-6 absolute" style={{ marginTop: 10 }}>
