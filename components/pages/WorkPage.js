@@ -17,7 +17,7 @@ const  WorkPage = ({ work }) => {
         >
             <div className="app__work-img relative">
                 <img
-                    className="sm:w-[36rem] w-[22rem] lg:w-[30rem] lg:h-72 h-60 sm:h-96 object-cover"
+                    className="w-[22rem] h-64 sm:w-[36rem] sm:h-96 lg:w-[30rem] lg:h-72 object-cover"
                     src={urlFor(imgUrl)}
                     alt={work.name}
                 />
