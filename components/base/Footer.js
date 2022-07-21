@@ -90,17 +90,17 @@ const Footer = () => {
           <div className="group">
           <a
             href=""
-            className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full bg-white group-hover:bg-primary-color"
+            className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full bg-white duration-300 ease-in-out group-hover:bg-primary-color"
           >
-            <FaTwitter className="text-secondary-color duration-300 ease-in-out group-hover:text-white" />
+            <FaTwitter className="text-secondary-color group-hover:text-white" />
           </a>
           </div>
           <div className="group">
           <a
             href=""
-            className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full bg-white group-hover:bg-primary-color"
+            className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full duration-300 ease-in-out bg-white group-hover:bg-primary-color"
           >
-            <FaLinkedinIn className="text-secondary-color duration-300 ease-in-out group-hover:text-white" />
+            <FaLinkedinIn className="text-secondary-color  group-hover:text-white" />
           </a>
           </div>
         </div>
