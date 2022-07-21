@@ -25,8 +25,8 @@ const Testimonial = () => {
   let testimonialSecond = testimonials[currentIndex + 1];
 
   return (
-    <>
-      <h4 className="mt-28 mb-8 text-center text-5xl font-bold">
+    <div className="app__testimonials w-full min-h-screen flex flex-col justify-center items-center py-28">
+      <h4 className="mb-8 text-center text-5xl font-bold">
         Testimonials
       </h4>
       {testimonials.length && (
@@ -36,7 +36,7 @@ const Testimonial = () => {
             className="flex flex-col justify-center md:flex-row"
           >
             <div>
-              <div className="max-w-1/2 mx-6 mb-4 overflow-hidden rounded-xl bg-light-color shadow-md md:mx-12 md:mb-0 md:max-w-2xl">
+              <div className="max-w-1/2 mx-6 mb-4 overflow-hidden rounded-xl md:mx-12 md:mb-0 md:max-w-2xl">
                 <div className="md:flex">
                   <div className="md:shrink-0">
                     <img
@@ -62,7 +62,7 @@ const Testimonial = () => {
               </div>
             </div>
             <div>
-              <div className="max-w-1/2 mx-6 mb-4 overflow-hidden rounded-xl bg-light-color shadow-md md:mx-12 md:mb-0 md:max-w-2xl">
+              <div className="max-w-1/2 mx-6 mb-4 overflow-hidden rounded-xl md:mx-12 md:mb-0 md:max-w-2xl">
                 <div className="md:flex">
                   <div className="md:shrink-0">
                     <img
@@ -116,7 +116,7 @@ const Testimonial = () => {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 };
 

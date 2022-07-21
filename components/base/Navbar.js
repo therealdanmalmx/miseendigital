@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`app__navbar fixed top-0 left-0 z-10 flex h-[80px] w-full items-center justify-between border-b-[1px] border-white px-8 py-14 backdrop-blur-sm transition-all duration-200
+      className={`app__navbar sticky top-0 left-0 z-10 flex h-[80px] w-full items-center justify-between border-b-[1px] border-white px-8 py-14 backdrop-blur-sm transition-all duration-200
     ${isScrolled ? "bg-white" : "bg-secondary-color/100"}`}
     >
       <div className="app__navbar-logo flex items-center justify-start cursor-pointer">

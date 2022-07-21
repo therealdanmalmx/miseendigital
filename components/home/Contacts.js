@@ -92,8 +92,8 @@ const Contacts = () => {
 
   return (
     <>
-    <div className="app__contact w-full flex-1 flex-col py-28">
-      <h1 className="app__contact-head-text mb-5 flex-1 flex-col text-center font-bold md:text-5xl">
+    <div className="app__contact w-full min-h-screen flex flex-col justify-center items-center  bg-light-color">
+      <h1 className="app__contact-head-text mb-5 flex-col text-center font-bold md:text-5xl">
         Get in touch with us
       </h1>
       {!isFormSubmitted ? (

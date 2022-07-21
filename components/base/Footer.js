@@ -55,7 +55,7 @@ const Footer = () => {
         <h1 className="mr-4 mb-4 text-base font-bold text-white">Contacts</h1>
         <p className="text-grey-color">Tel. +351 912 658 932</p>
         <p className="text-grey-color">hello@miseendigital.com</p>
-        <button className="bg-primary-color mt-7 transition duration-300 ease-in-out">
+        <button className="bg-primary-color mt-7 transition duration-300 ease-in-out hover:bg-white hover:text-black">
           Get in touch
         </button>
       </div>
@@ -79,24 +79,30 @@ const Footer = () => {
           </a>
         </div>
         <div className="app__footer-social flex">
+          <div className="group">
+            <a
+              href=""
+              className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full bg-white duration-300 ease-in-out group-hover:bg-primary-color"
+            >
+              <FaInstagram className="text-secondary-color group-hover:text-white" />
+            </a>
+          </div>
+          <div className="group">
           <a
             href=""
-            className="mr-2 flex w-6 cursor-pointer items-center justify-center rounded-full bg-white marker:h-6"
+            className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full bg-white group-hover:bg-primary-color"
           >
-            <FaInstagram className="text-secondary-color" />
+            <FaTwitter className="text-secondary-color duration-300 ease-in-out group-hover:text-white" />
           </a>
+          </div>
+          <div className="group">
           <a
             href=""
-            className="mr-2 flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-white"
+            className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full bg-white group-hover:bg-primary-color"
           >
-            <FaTwitter className="text-secondary-color" />
+            <FaLinkedinIn className="text-secondary-color duration-300 ease-in-out group-hover:text-white" />
           </a>
-          <a
-            href=""
-            className="mr-2 flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-white"
-          >
-            <FaLinkedinIn className="text-secondary-color" />
-          </a>
+          </div>
         </div>
       </div>
     </div>

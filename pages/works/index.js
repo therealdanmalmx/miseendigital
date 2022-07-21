@@ -32,7 +32,7 @@ const Works = () => {
   };
 
   return (
-    <div className="app__works mt-12 bg-light-color py-28">
+    <div className="app__works min-h-screen bg-light-color py-28">
       <h1 className="app_about-head-text w-full flex-1 flex-col text-center font-bold md:text-5xl">
         Our Creative Portfolio
       </h1>
