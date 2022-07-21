@@ -17,7 +17,7 @@ const  WorkPage = ({ work }) => {
         >
             <div className="app__work-img relative">
                 <img
-                    className="w-96 h-96 my-5 mx-2 object-cover"
+                    className="w-[28rem] h-72 my-5 mx-2 object-cover"
                     src={urlFor(imgUrl)}
                     alt={work.name}
                 />
@@ -34,9 +34,9 @@ const  WorkPage = ({ work }) => {
                 <div key={work._id}>
                     <div>
                         <p className="top-20 left-16 absolute" style={{ marginTop: 10 }}>
-                        {work.description}
+                            {work.description}
                         </p>
-                        <div className="app__work-tag absolute top-10 left-16 bg-white py-2 px-4 text-base">
+                        <div className="app__work-tag absolute top-4 left-6 bg-white py-2 px-4 text-base">
                             <p className="">{work.tags[0]}</p>
                         </div>
                     </div>
