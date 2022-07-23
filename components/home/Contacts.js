@@ -88,7 +88,7 @@ const Contacts = () => {
 
   return (
     <>
-    <div className="app__contact w-full min-h-screen flex flex-col justify-center items-center  bg-light-color">
+    <div className="app__contact w-full min-h-screen sm:py-32 flex flex-col justify-center items-center bg-light-color">
       <h1 className="app__contact-head-text mb-5 flex-col text-center font-bold md:text-5xl">
         Get in touch with us
       </h1>
@@ -98,7 +98,7 @@ const Contacts = () => {
           onSubmit={formValidation}
           className="app__contact-form flex w-full flex-col items-center"
         >
-          <div className="mb-4 flex w-full px-4 md:w-[50%]">
+          <div className="mb-4 flex w-full px-4 md:w-[100%] lg:w-[50%]">
             <input
               className="w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
               type="text"
@@ -110,7 +110,7 @@ const Contacts = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <div className="mb-4 flex w-full px-4 md:w-[50%]">
+          <div className="mb-4 flex w-full px-4 md:w-[100%] lg:w-[50%]">
             <input
               className="w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
               type="email"
@@ -121,7 +121,7 @@ const Contacts = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <div className="flex w-full px-4 md:w-[50%]">
+          <div className="flex w-full px-4 md:w-[100%] lg:w-[50%]">
             <textarea
               className="h-[150px] w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
               placeholder="Your Message"
