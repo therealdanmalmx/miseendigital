@@ -148,8 +148,8 @@ const Contacts = () => {
       )}
       {errorMessage && (
         <div className="px-4 duration-1000 ease-in-out">
-          <div className="mx-auto mt-4 w-full md:w-1/2 md:p-4">
-            <p className="relative underline-color flex items-center justify-between text-left text-xl leading-10 bg-warning-color text-white md:justify-center">
+          <div className="mx-auto mt-4 w-full md:w-full md:p-4">
+            <p className="relative underline-color px-30 flex items-center justify-between text-left text-xl leading-10 bg-warning-color text-white md:justify-center">
               {errorMessage}
               <span
                 className="cursor-pointer text-white absolute right-4"
