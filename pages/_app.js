@@ -1,14 +1,11 @@
 import "../styles/globals.css";
-import Navbar from "../components/base/Navbar";
-import Footer from "../components/base/Footer";
+import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <Component {...pageProps} />
-      <Footer />
-    </div>
+    </Layout>
   );
 }
 
