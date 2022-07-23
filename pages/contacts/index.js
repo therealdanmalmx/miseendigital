@@ -24,7 +24,6 @@ const Contacts = () => {
   const { name, email, message } = formData;
 
   const handleChangeInput = (e) => {
-    console.log(e.target);
     const { name, value } = e.target;
 
     setFormData({ ...formData, [name]: value });
@@ -32,7 +31,6 @@ const Contacts = () => {
 
   const formValidation = (e) => {
     e.preventDefault();
-    console.log({ errorMessage });
     if (!formData.message) {
       setErrorMessage("A message is required");
       const message = document.querySelector("textarea");
@@ -77,8 +75,6 @@ const Contacts = () => {
     setErrorMessage("");
   };
 
-  console.log("formData", formData.name);
-
   const handleSubmit = () => {
     setErrorMessage("");
     setLoading(true);
@@ -104,7 +100,7 @@ const Contacts = () => {
       </h1>
       <p className="mb-8 pl-16 text-lg text-white text-left">
       Lorem ipsum dolor sit amet, duo summo recteque repudiandae ea. Ea utinam accommodare pri, <br />
-      an duo explicari interesset theophrastus, eu munere nonumes delicatissimi duo. 
+      an duo explicari interesset theophrastus, eu munere nonumes delicatissimi duo.
       </p>
     </div>
 
@@ -155,8 +151,8 @@ const Contacts = () => {
           </div>
           <div className="flex w-full px-4 md:w-[50%] mt-3 mb-3">
             <label className="flex">
-                <input 
-                  type="checkbox" 
+                <input
+                  type="checkbox"
                   className="w-5 h-5"
                   checked={checked}
                   onChange={handleChange}

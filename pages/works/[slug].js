@@ -41,7 +41,6 @@ export async function getStaticProps({ params }) {
 }
 
 export default function WorksPage({ works }) {
-  console.log({ works });
   return (
     <div>
       <Work works={works} />

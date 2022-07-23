@@ -6,7 +6,6 @@ import Image from "next/image";
 
 const  WorkPage = ({ work }) => {
     const { imgUrl } = work;
-    console.log(imgUrl)
     const [animateCard, setanimateCard] = useState({ y: 0, opacity: 1 });
 
   return (
