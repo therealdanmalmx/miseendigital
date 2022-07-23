@@ -18,7 +18,6 @@ const Contacts = () => {
   const { name, email, message } = formData;
 
   const handleChangeInput = (e) => {
-    console.log(e.target);
     const { name, value } = e.target;
 
     setFormData({ ...formData, [name]: value });
@@ -26,7 +25,6 @@ const Contacts = () => {
 
   const formValidation = (e) => {
     e.preventDefault();
-    console.log({ errorMessage });
     if (!formData.message) {
       setErrorMessage("A message is required");
       const message = document.querySelector("textarea");
@@ -70,8 +68,6 @@ const Contacts = () => {
     document.querySelector("textarea").style.border = "2px solid grey";
     setErrorMessage("");
   };
-
-  console.log("formData", formData.name);
 
   const handleSubmit = () => {
     setErrorMessage("");
