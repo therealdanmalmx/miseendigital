@@ -22,7 +22,7 @@ const services = [
 
 const Footer = () => {
   return (
-    <div className="app__footer grid grid-cols-1 bg-secondary-color px-10 py-20 md:px-10 md:py-40 md:grid-cols-4">
+    <div className="app__footer grid grid-cols-1 bg-secondary-color px-10 py-40 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
       <div className="app__footer-col-2 xxs:mb-6 xs:mb-6 sm:mb-6">
         <h1 className="mr-4 mb-4 text-base font-bold text-white">Company</h1>
         <ul>
@@ -59,7 +59,7 @@ const Footer = () => {
           Get in touch
         </button>
       </div>
-      <div className="app__footer-col-1 mt-10 min-w-max sm:order-last md:order-first md:mt-0">
+      <div className="app__footer-col-1 mt-10 sm:mt-0 min-w-max sm:order-last md:order-first md:mt-0">
         <div className="app__footer-logo flex items-center justify-start pb-2">
             <Image
               src={images.logoWhite}

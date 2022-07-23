@@ -28,19 +28,21 @@ const Navbar = () => {
       className={`app__navbar sticky top-0 left-0 z-10 flex h-[80px] w-full items-center justify-between border-b-[1px] border-white px-8 py-14 backdrop-blur-sm transition-all duration-200
     ${isScrolled ? "bg-white" : "bg-secondary-color/100"}`}
     >
-      <div className="app__navbar-logo flex items-center justify-start cursor-pointer">
+      <div className="app__navbar-logo cursor-pointer w-7/12 md:w-1/5">
         <Link href="/">
           {isScrolled ?
             <Image 
               src={images.logoBlack} 
               width={250}
               height={31}
+              layout="responsive"
             />
           :
             <Image 
               src={images.logoWhite} 
               width={250}
               height={31}
+              layout="responsive"
             />
           }
         </Link>

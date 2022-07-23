@@ -33,9 +33,9 @@ const Testimonial = () => {
         <>
           <div
             key={testimonial._id}
-            className="flex flex-col justify-center md:flex-row"
+            className="grid grid-cols-1 lg:grid-cols-2"
           >
-            <div>
+            <div className="md:mb-10">
               <div className="max-w-1/2 mx-6 mb-4 overflow-hidden rounded-xl md:mx-12 md:mb-0 md:max-w-2xl">
                 <div className="md:flex">
                   <div className="md:shrink-0">
