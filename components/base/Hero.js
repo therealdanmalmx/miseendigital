@@ -3,7 +3,7 @@ import { images } from "../../utils";
 
 const Hero = () => {
   return (
-    <div className="app__hero w-full h-screen flex flex-col justify-center items-center  bg-black bg-opacity-30 bg-blend-overlay" style={{ backgroundImage: `url(${images.heroBG.src})` }}>
+    <div className="app__hero h-[calc(100vh_-_113px)] w-full h-screen flex flex-col justify-center items-center  bg-black bg-opacity-30 bg-blend-overlay" style={{ backgroundImage: `url(${images.heroBG.src})` }}>
       <h1 className="mb-4 max-w-4xl text-center text-5xl font-normal leading-snug text-white md:text-6xl md:leading-tight">
         We design, develop and{" "} modernize your digital tools
       </h1>
