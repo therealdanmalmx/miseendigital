@@ -40,7 +40,7 @@ const Testimonial = () => {
                 <div className="md:flex">
                   <div className="md:shrink-0">
                     <img
-                      className="relative h-48 w-full object-cover rounded-tl-xl rounded-br-xl transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
+                      className="relative h-48 w-full object-cover rounded-tl-3xl rounded-br-3xl transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
                       src={urlFor(testimonial.imgUrl)}
                       alt={urlFor(testimonial.imgUrl)}
                     />
@@ -66,7 +66,7 @@ const Testimonial = () => {
                 <div className="md:flex">
                   <div className="md:shrink-0">
                     <img
-                      className="relative h-48 w-full object-cover transition rounded-tl-xl rounded-br-xl  duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
+                      className="relative h-48 w-full object-cover transition rounded-tl-3xl rounded-br-3xl  duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
                       src={urlFor(testimonialSecond.imgUrl)}
                       alt={urlFor(testimonialSecond.imgUrl)}
                     />
