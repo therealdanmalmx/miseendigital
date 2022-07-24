@@ -29,7 +29,7 @@ export default function Work({ works }) {
           </Link>
         </div>
           <img
-            className="h-[calc(min-h-screen - 80px)] object-cover"
+            className="h-[calc(100vh_-_113px)] w-full object-cover"
             src={urlFor(imgUrl)}
             alt={urlFor(imgUrl)}
           />
@@ -40,7 +40,7 @@ export default function Work({ works }) {
             passHref
             href={projectLink}
           >
-            <a className="absolute text-white bottom-72" target="_blank" noreferrer >Project link</a>
+            <a className="absolute text-white bottom-72" target="_blank" noreferrer="true" >Project link</a>
           </Link>
         </div>
         <div className="m-16">
