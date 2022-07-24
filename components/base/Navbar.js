@@ -36,15 +36,15 @@ const Navbar = () => {
       <div className="app__navbar-logo cursor-pointer w-7/12 md:w-1/5">
         <Link href="/">
           {isScrolled ?
-            <Image 
-              src={images.logoBlack} 
+            <Image
+              src={images.logoBlack}
               width={250}
               height={31}
               layout="responsive"
             />
           :
-            <Image 
-              src={images.logoWhite} 
+            <Image
+              src={images.logoWhite}
               width={250}
               height={31}
               layout="responsive"
@@ -76,14 +76,15 @@ const Navbar = () => {
                 className="absolute right-4 top-4 h-6 w-6 text-white"
                 onClick={() => setToggle(false)}
               />
-              <div class="w-full flex flex-col md:flex-row md:items-center md:justify-between lg:px-80">
+              <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between lg:px-80">
                 <ul className="text-left">
                   {["Home", "Services", "Works", "Contacts"].map((item) => (
                     <Link
                       passHref
+                      key={item}
                       href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                     >
-                      <li className="m-4" key={item}>
+                      <li className="m-4">
                         <a
                           className="text-5xl md:text-7xl font-bold leading-{3rem} uppercase text-white hover:text-primary-color"
                           onClick={() => setToggle(false)}
@@ -94,7 +95,7 @@ const Navbar = () => {
                     </Link>
                   ))}
                 </ul>
-                <div class="flex flex-col md:items-start">
+                <div className="flex flex-col md:items-start">
                   <div className="text-left md:pb-5 hidden md:block">
                     <p className="text-white">Tel. +351 912 658 932</p>
                     <p className="text-white">hello@miseendigital.com</p>
