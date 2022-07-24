@@ -4,6 +4,11 @@ import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { images } from "../../utils";
 import Image from 'next/image'
+import {
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -63,7 +68,7 @@ const Navbar = () => {
 
           {toggle && (
             <motion.div
-              className="fixed top-0 bottom-0 right-0 z-10 flex h-screen w-full items-center justify-center bg-secondary-color p-4 text-center"
+              className="fixed top-0 bottom-0 right-0 z-10 flex h-screen w-full items-center justify-start bg-secondary-color p-4 text-center"
               whileInView={{ y: [-100, 0] }}
               transition={{ duration: 0.85, ease: "easeOut" }}
             >
@@ -71,23 +76,60 @@ const Navbar = () => {
                 className="absolute right-4 top-4 h-6 w-6 text-white"
                 onClick={() => setToggle(false)}
               />
-              <ul className="">
-                {["Home", "Services", "Works", "Contacts"].map((item) => (
-                  <Link
-                    passHref
-                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  >
-                    <li className="m-4" key={item}>
+              <div class="w-full flex flex-col md:flex-row md:items-center md:justify-between lg:px-80">
+                <ul className="text-left">
+                  {["Home", "Services", "Works", "Contacts"].map((item) => (
+                    <Link
+                      passHref
+                      href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    >
+                      <li className="m-4" key={item}>
+                        <a
+                          className="text-5xl md:text-7xl font-bold leading-{3rem} uppercase text-white hover:text-primary-color"
+                          onClick={() => setToggle(false)}
+                        >
+                          {item}
+                        </a>
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
+                <div class="flex flex-col md:items-start">
+                  <div className="text-left md:pb-5 hidden md:block">
+                    <p className="text-white">Tel. +351 912 658 932</p>
+                    <p className="text-white">hello@miseendigital.com</p>
+                  </div>
+                  <div className="app__footer-social flex justify-start ml-5 pt-5 md:pt-0 pb-5 md:ml-0">
+                    <div className="group">
                       <a
-                        className="text-6xl font-bold text-white hover:text-primary-color"
-                        onClick={() => setToggle(false)}
+                        href=""
+                        className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full bg-white duration-300 ease-in-out group-hover:bg-primary-color"
                       >
-                        {item}
+                        <FaInstagram className="text-secondary-color group-hover:text-white" />
                       </a>
-                    </li>
-                  </Link>
-                ))}
-              </ul>
+                    </div>
+                    <div className="group">
+                    <a
+                      href=""
+                      className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full bg-white duration-300 ease-in-out group-hover:bg-primary-color"
+                    >
+                      <FaTwitter className="text-secondary-color group-hover:text-white" />
+                    </a>
+                    </div>
+                    <div className="group">
+                      <a
+                        href=""
+                        className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full duration-300 ease-in-out bg-white group-hover:bg-primary-color"
+                      >
+                        <FaLinkedinIn className="text-secondary-color  group-hover:text-white" />
+                      </a>
+                  </div>
+                  </div>
+                  <button className="bg-primary-color mt-7 transition duration-300 ease-in-out hover:bg-white hover:text-black">
+                    Get in touch
+                  </button>
+                </div>
+              </div>
             </motion.div>
           )}
         </div>
