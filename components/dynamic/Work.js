@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { urlFor } from "../../client";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/future/image";
 
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
@@ -28,9 +28,10 @@ export default function Work({ works }) {
               </a>
           </Link>
         </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="h-[calc(100vh_-_113px)] w-full object-cover"
-            src={urlFor(imgUrl)}
+            src={`${urlFor(imgUrl)}`}
             alt={urlFor(imgUrl)}
           />
         <div className="flex flex-col mx-5 text-white">

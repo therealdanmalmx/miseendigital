@@ -68,9 +68,9 @@ const Navbar = () => {
 
           {toggle && (
             <motion.div
-              className="fixed top-0 bottom-0 right-0 z-10 flex h-screen w-full items-center justify-start bg-secondary-color p-4 text-center"
-              whileInView={{ y: [-100, 0] }}
-              transition={{ duration: 0.85, ease: "easeOut" }}
+              className="fixed top-0 left-0 z-10 flex h-screen w-full items-center justify-start bg-secondary-color p-4 text-center"
+              animate={{ y: [-50, 0]}}
+              transition={{ duration: 0.5, ease: "easeIn" }}
             >
               <HiX
                 className="absolute right-4 top-4 h-6 w-6 text-white"

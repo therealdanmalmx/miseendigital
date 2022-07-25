@@ -10,6 +10,9 @@ import digitization from "../assets/digitization.jpg"
 import bgNew2 from "../assets/background-new_2.jpg"
 import green from "../assets/green.jpg"
 import communication from "../assets/communication.jpg"
+import srvc from "../assets/services.jpg"
+import tree from "../assets/tree.jpg"
+import bblocks_1 from "../assets/building_blocks_1.jpg"
 
 export default {
     logoWhite,
@@ -23,5 +26,9 @@ export default {
     digitization,
     bgNew2,
     green,
-    communication
+    communication,
+    srvc,
+    tree,
+    bblocks_1,
+
 }

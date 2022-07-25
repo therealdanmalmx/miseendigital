@@ -1,9 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
+  experimental: {
+    images: {
+      allowFutureImage: true
+    }
+  },
   images: {
-    domains: ["localhost"],
+    domains: ['cdn.sanity.io', 'localhost'],
   },
 };
-
-module.exports = nextConfig;
