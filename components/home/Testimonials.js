@@ -36,12 +36,12 @@ const Testimonial = () => {
             className="grid grid-cols-1 lg:grid-cols-2"
           >
             <div className="md:mb-10">
-              <div className="max-w-1/2 mx-6 mb-4 overflow-hidden md:mx-12 md:mb-0 md:max-w-2xl">
+              <div className="max-w-1/2 mx-6 mb-4 md:mx-12 md:mb-0 md:max-w-2xl">
                 <div className="md:flex">
-                  <div className="md:shrink-0">
+                  <div className="md:shrink-0 h-full relative overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      className="relative h-48 w-full object-cover rounded-tl-3xl rounded-br-3xl transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
+                      className="relative h-48 w-full object-cover rounded-tl-3xl rounded-br-3xl transition duration-500 ease-in-out hover:scale-110 md:h-60 md:w-72"
                       src={urlFor(testimonial.imgUrl)}
                       alt={urlFor(testimonial.imgUrl)}
                       />
@@ -63,12 +63,12 @@ const Testimonial = () => {
               </div>
             </div>
             <div>
-              <div className="max-w-1/2 mx-6 mb-4 overflow-hidden rounded-xl md:mx-12 md:mb-0 md:max-w-2xl">
+              <div className="max-w-1/2 mx-6 mb-4 overflow-hidden md:mx-12 md:mb-0 md:max-w-2xl">
                 <div className="md:flex">
-                  <div className="md:shrink-0">
+                  <div className="md:shrink-0 h-full relative overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      className="relative h-48 w-full object-cover transition rounded-tl-3xl rounded-br-3xl5  duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
+                      className="relative h-48 w-full object-cover rounded-tl-3xl rounded-br-3xl transition duration-500 ease-in-out hover:scale-110 md:h-60 md:w-72"
                       src={urlFor(testimonialSecond.imgUrl)}
                       alt={urlFor(testimonialSecond.imgUrl)}
                       />
