@@ -94,7 +94,7 @@ const Contacts = () => {
 
   return (
     <>
-    <div className="app__hero flex h-screen max-w-full flex-col items-start justify-center bg-secondary-color bg-cover bg-center" style={{backgroundImage: `url(${images.sample.src})`}}>
+    <div className="app__hero flex h-[calc(100vh_-_113px)] max-w-full flex-col items-start justify-center bg-secondary-color bg-cover bg-center" style={{backgroundImage: `url(${images.sample.src})`}}>
       <h1 className="mb- pl-16 max-w-4xl text-left text-5xl font-bold leading-snug text-white md:text-7xl md:leading-tight">
         <span className="text-white">Contacts</span>
       </h1>

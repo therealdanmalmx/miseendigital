@@ -88,7 +88,7 @@ const Contacts = () => {
 
   return (
     <>
-    <div className="app__contact w-full min-h-screen sm:py-32 flex flex-col justify-center items-center bg-light-color">
+    <div className="app__contact w-full h-[calc(100vh_-_113px)] sm:py-32 flex flex-col justify-center items-center bg-light-color">
       <h1 className="app__contact-head-text mb-10 flex-col text-center font-bold md:text-5xl">
         What do you want us to do?
       </h1>
