@@ -40,7 +40,7 @@ const Services = () => {
           What we can do for you
         </h1>
         <p className="app__services-description-text mb-10 w-full px-7 text-center text-base md:w-6/12 md:text-lg">
-          No matter what trends come and go, offering something that customers want, in the easiet way possible and with pleasing aesthetics will never go out of style. We focus on the basics for you and your customers.
+          No matter what trends come and go, offering something that customers want, in the easiet way possible and with pleasing aesthetics will never go out of style. We focus on getting the basics right for you and your customers.
         </p>
         <div className="app__profiles overflow-x-hidden overflow-y-hidden flex cursor-pointer flex-wrap items-start justify-center">
           {abouts.map((about, index) => (
