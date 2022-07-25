@@ -36,7 +36,7 @@ const Works = () => {
   return (
     <div className="app__works min-h-screen bg-light-color py-28">
       <h1 className="app_about-head-text w-full flex-1 flex-col text-center font-bold md:text-5xl">
-        Our Creative Portfolio
+        What we have done already
       </h1>
       <div className="app__work-filter my-8 flex flex-wrap justify-center">
         {["All", "UX/UI", "Web Development", "E-commerce"].map(

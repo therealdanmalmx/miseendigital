@@ -20,7 +20,7 @@ export default function Service({ services }) {
       <div className="w-full px-20 pt-40 mx-auto">
         <div className="text-left flex items-center mb-10 hover:text-primary-color">
           <HiOutlineChevronLeft className="w-6 h-6"/>
-            <Link href="/services"> 
+            <Link href="/services">
               <a
                 className="text-lg text-black transition duration-300 ease-in-out hover:text-primary-color"
               >
@@ -33,6 +33,7 @@ export default function Service({ services }) {
           <div className="mt-3 text-left text-xl font-normal">
             {description}
           </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="relative mb-10 mt-5 h-[400px] w-full object-cover transition duration-300 ease-in-out md:h-[800px] md:w-[1200px]"
             src={urlFor(imgUrl)}

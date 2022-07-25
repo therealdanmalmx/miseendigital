@@ -27,7 +27,7 @@ const Testimonial = () => {
   return (
     <div className="app__testimonials w-full min-h-screen flex flex-col justify-center items-center py-28">
       <h4 className="mb-8 text-center text-5xl font-bold">
-        Testimonials
+        What people think of our work
       </h4>
       {testimonials.length && (
         <>
@@ -39,11 +39,12 @@ const Testimonial = () => {
               <div className="max-w-1/2 mx-6 mb-4 overflow-hidden md:mx-12 md:mb-0 md:max-w-2xl">
                 <div className="md:flex">
                   <div className="md:shrink-0">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       className="relative h-48 w-full object-cover rounded-tl-3xl rounded-br-3xl transition duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
                       src={urlFor(testimonial.imgUrl)}
                       alt={urlFor(testimonial.imgUrl)}
-                    />
+                      />
                   </div>
                   <div className="flex flex-col justify-around p-4">
                     <div>
@@ -65,11 +66,12 @@ const Testimonial = () => {
               <div className="max-w-1/2 mx-6 mb-4 overflow-hidden rounded-xl md:mx-12 md:mb-0 md:max-w-2xl">
                 <div className="md:flex">
                   <div className="md:shrink-0">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       className="relative h-48 w-full object-cover transition rounded-tl-3xl rounded-br-3xl5  duration-300 ease-in-out hover:scale-105 md:h-60 md:w-72"
                       src={urlFor(testimonialSecond.imgUrl)}
                       alt={urlFor(testimonialSecond.imgUrl)}
-                    />
+                      />
                   </div>
                   <div className="flex flex-col justify-between p-4 md:justify-around">
                     <div>

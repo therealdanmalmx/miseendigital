@@ -90,7 +90,7 @@ const Contacts = () => {
     <>
     <div className="app__contact w-full min-h-screen sm:py-32 flex flex-col justify-center items-center bg-light-color">
       <h1 className="app__contact-head-text mb-5 flex-col text-center font-bold md:text-5xl">
-        Get in touch with us
+        What do you want us to do?
       </h1>
       {!isFormSubmitted ? (
         <form

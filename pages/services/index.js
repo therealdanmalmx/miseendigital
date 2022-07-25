@@ -36,7 +36,7 @@ const Services = () => {
         </p>
       </div>
       <div className="app__services flex flex-col items-center justify-center py-28">
-        <h1 className="app__services-head-text mb-10 h-96 flex-1 flex-col text-center font-bold md:text-5xl">
+        <h1 className="app__services-head-text h-96 mb-10 flex-1 flex-col text-center font-bold md:text-5xl">
           What we can do for you
         </h1>
         <p className="app__services-description-text mb-10 w-full px-7 text-center text-base md:w-6/12 md:text-lg">
@@ -49,7 +49,7 @@ const Services = () => {
               href={`/services/${about.title.toLowerCase().split(" ").join("-")}`}
               key={about._id}
             >
-              <div className="relative overflow-hidden w-[325px] h-96">
+              <div className="relative overflow-hidden w-[325px] h-96 my-2 md:m-0">
                 {about.imgUrl && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -61,6 +61,7 @@ const Services = () => {
                   <h2 className="bold-text bg-black p-2 absolute bottom-5 left-5 text-white font-bold">
                     {about.title}
                   </h2>
+
               </div>
             </Link>
           ))}
