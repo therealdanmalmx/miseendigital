@@ -60,6 +60,7 @@ const Services = () => {
                     <div className="w-2/5 z-10 flex flex-col peer justify-center items-center text-sm leading-6 tracking-wide absolute top-0 bg-white right-0 opacity-80 bg-opacity-90 h-full">
                       <p className="mx-10">{about.description}</p>
                     </div>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={`${urlFor(about.imgUrl)}`}
                       alt={about.title}
