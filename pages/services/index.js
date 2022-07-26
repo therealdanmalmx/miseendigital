@@ -53,7 +53,7 @@ const Services = () => {
               href={`/services/${about.title.toLowerCase().split(" ").join("-")}`}
               key={about._id}
             >
-              <div className="relative overflow-hidden w-[325px] h-[400px] my-2 md:my-12 md:h-[400px] md:w-[1024px]">
+              <div className="relative overflow-hidden w-[325px] h-[400px] my-2 md:my-8 md:h-[400px] md:w-[1024px]">
                 {about.imgUrl && (
                   <>
                     <div className="w-full h-[200px] md:w-2/5 z-10 flex flex-col peer justify-center items-center text-sm leading-6 tracking-wide opacity-70 absolute top-0 bg-white md:right-0 md:h-full md:top-0 md:opacity-80 bg-opacity-90">
