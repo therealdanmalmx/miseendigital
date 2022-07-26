@@ -58,7 +58,7 @@ const Services = () => {
                     className="ease-in-out duration-500 hover:scale-125 block relative w-full h-full object-cover"
                   />
                 )}
-                  <h2 className="bold-text bg-black p-2 absolute bottom-5 left-5 text-white font-bold">
+                  <h2 className="bold-text bg-black px-4 py-2 absolute bottom-5 left-5 text-white font-bold">
                     {about.title}
                   </h2>
 
