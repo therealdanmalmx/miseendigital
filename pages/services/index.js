@@ -65,7 +65,7 @@ const Services = () => {
                   <div className="w-2/5 flex flex-col justify-center items-center peer text-sm leading-6 tracking-wide absolute top-0 bg-white right-0 opacity-80 bg-opacity-90 h-full">
                     <p className="mx-10">{about.description}</p>
                   </div>
-                  <h2 className="bold-text bg-black z-10 px-4 py-2 absolute bottom-5 left-5 text-white font-bold">
+                  <h2 className="bold-text bg-black px-4 py-2 absolute bottom-5 left-5 text-white font-bold">
                     {about.title}
                   </h2>
               </div>
