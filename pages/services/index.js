@@ -53,11 +53,10 @@ const Services = () => {
               href={`/services/${about.title.toLowerCase().split(" ").join("-")}`}
               key={about._id}
             >
-              <div className="relative overflow-hidden w-[325px] h-96 my-2 md:my-12 md:h-[400px] md:w-[1024px]">
+              <div className="relative overflow-hidden w-[325px] h-[400px] my-2 md:my-12 md:h-[400px] md:w-[1024px]">
                 {about.imgUrl && (
                   <>
-                  <div>
-                    <div className="w-2/5 z-10 flex flex-col peer justify-center items-center text-sm leading-6 tracking-wide absolute top-0 bg-white right-0 opacity-80 bg-opacity-90 h-full">
+                    <div className="w-full h-[200px] md:w-2/5 z-10 flex flex-col peer justify-center items-center text-sm leading-6 tracking-wide opacity-70 absolute top-0 bg-white md:right-0 md:h-full md:top-0 md:opacity-80 bg-opacity-90">
                       <p className="mx-10">{about.description}</p>
                     </div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -66,8 +65,6 @@ const Services = () => {
                       alt={about.title}
                       className="ease-in-out duration-500 hover:scale-110 peer-hover:scale-110 block relative w-full h-full object-cover"
                     />
-                  </div>
-
                   </>
                 )}
                   <h2 className="bold-text bg-black px-4 py-2 peer absolute bottom-5 left-5 text-white font-bold">
