@@ -13,6 +13,7 @@ import communication from "../assets/communication.jpg"
 import srvc from "../assets/services.jpg"
 import tree from "../assets/tree.jpg"
 import bblocks_1 from "../assets/building_blocks_1.jpg"
+import whatyouwant from "../assets/whatyouwant.webp"
 
 export default {
     logoWhite,
@@ -30,5 +31,6 @@ export default {
     srvc,
     tree,
     bblocks_1,
+    whatyouwant,
 
 }

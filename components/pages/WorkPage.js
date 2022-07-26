@@ -15,6 +15,7 @@ const  WorkPage = ({ work }) => {
             href={`/works/${work.title.toLowerCase().split(" ").join("-")}`}
         >
             <div className="app__work-img relative">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     className="w-[22rem] cursor-pointer h-64 sm:w-[36rem] sm:h-96 lg:w-[30rem] lg:h-72 xl:w-[36rem] xl:h-96 object-cover"
                     src={urlFor(imgUrl)}

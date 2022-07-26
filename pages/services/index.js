@@ -20,8 +20,8 @@ const Services = () => {
   return (
     <>
       <div
-        className="app__hero flex h-[calc(100vh_-_113px)] max-w-full bg-top flex-col items-start justify-center bg-secondary-color bg-cover bg-center"
-        style={{backgroundImage: `url(${images.bblocks_1.src})`}}
+        className="app__hero flex h-[calc(100vh_-_113px)] h-screen max-w-full flex-col items-start justify-center bg-secondary-color bg-center bg-cover"
+        style={{backgroundImage: `url(${images.whatyouwant.src})`}}
       >
         <h1 className="mx-10 max-w-4xl text-left text-5xl font-bold leading-snug text-white md:text-7xl md:leading-tight">
           <span className="text-white">What we do</span>
@@ -31,8 +31,8 @@ const Services = () => {
           We're not much for hyperbole, slogans or empty talk. We develop web stuff.
           <span className="block">We are not a full service agency. We focus on a selected few tasks that we try to master.</span>
         {/* eslint-disable-next-line react/no-unescaped-entities */}
-          <span className="block">We don't suggar coat anything. You get what you came here to get. Our expertise. </span>
-          <span className="mt-6 block"> Period.</span>
+          <span className="block">We don't sugar-coat anything. You get what you came here to get. Our expertise. </span>
+          <span className="mt-4 block"> Period.</span>
         </p>
       </div>
       <div className="app__services flex flex-col items-center justify-center py-28">

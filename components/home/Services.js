@@ -17,7 +17,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="h-[calc(100vh_-_113px)]">
+    <div className="min-h-screen">
       <div className="app__services flex flex-col items-center justify-center py-20">
       <h1 className="app__services-head-text mb-10 h-96 flex-1 flex-col text-center font-bold md:text-5xl">
         What we can do for you
@@ -32,7 +32,7 @@ const Services = () => {
             href={`/services/${about.title.toLowerCase().split(" ").join("-")}`}
             key={about._id}
           >
-            <div className="relative overflow-hidden w-[325px] h-96">
+            <div className="relative overflow-hidden w-[325px] h-96 my-2 md:m-0">
               {about.imgUrl && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img

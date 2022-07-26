@@ -25,7 +25,7 @@ const Testimonial = () => {
   let testimonialSecond = testimonials[currentIndex + 1];
 
   return (
-    <div className="app__testimonials w-full h-[calc(100vh_-_113px)] flex flex-col justify-center items-center py-28">
+    <div className="app__testimonials w-full min-h-screen flex flex-col justify-center items-center py-28">
       <h4 className="mb-8 text-center text-5xl font-bold">
         What people think of our work
       </h4>
