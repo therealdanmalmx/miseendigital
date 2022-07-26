@@ -63,13 +63,13 @@ const Services = () => {
                     <img
                       src={`${urlFor(about.imgUrl)}`}
                       alt={about.title}
-                      className="ease-in-out duration-500 hover:scale-125 peer-hover:scale-125 block relative w-full h-full object-cover"
+                      className="ease-in-out duration-500 hover:scale-110 peer-hover:scale-110 block relative w-full h-full object-cover"
                     />
                   </div>
 
                   </>
                 )}
-                  <h2 className="bold-text bg-black px-4 py-2 peer-hover:scale-125 absolute bottom-5 left-5 text-white font-bold">
+                  <h2 className="bold-text bg-black px-4 py-2 peer absolute bottom-5 left-5 text-white font-bold">
                     {about.title}
                   </h2>
               </div>
