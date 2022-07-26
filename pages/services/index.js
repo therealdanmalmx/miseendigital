@@ -18,7 +18,7 @@ const Services = () => {
   }, []);
 
   return (
-    <>
+    <div>
       {/* Services heading */}
       <div
         className="app__hero flex h-[calc(100vh_-_113px)] h-screen max-w-full flex-col items-start justify-center bg-secondary-color bg-center bg-cover"
@@ -53,26 +53,30 @@ const Services = () => {
               href={`/services/${about.title.toLowerCase().split(" ").join("-")}`}
               key={about._id}
             >
-              <div className="relative overflow-hidden w-[325px] h-96 my-2 md:my-12 md:h-[450px] md:w-[1024px]">
+              <div className="relative overflow-hidden w-[325px] h-96 my-2 md:my-12 md:h-[400px] md:w-[1024px]">
                 {about.imgUrl && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={`${urlFor(about.imgUrl)}`}
-                    alt={about.title}
-                    className="ease-in-out duration-500 hover:scale-125 peer-hover:scale-125 block relative w-full h-full object-cover"
-                  />
-                )}
-                  <div className="w-2/5 flex flex-col justify-center items-center peer text-sm leading-6 tracking-wide absolute top-0 bg-white right-0 opacity-80 bg-opacity-90 h-full">
-                    <p className="mx-10">{about.description}</p>
+                  <>
+                  <div>
+                    <div className="w-2/5 z-10 flex flex-col peer justify-center items-center text-sm leading-6 tracking-wide absolute top-0 bg-white right-0 opacity-80 bg-opacity-90 h-full">
+                      <p className="mx-10">{about.description}</p>
+                    </div>
+                    <img
+                      src={`${urlFor(about.imgUrl)}`}
+                      alt={about.title}
+                      className="ease-in-out duration-500 hover:scale-125 peer-hover:scale-125 block relative w-full h-full object-cover"
+                    />
                   </div>
-                  <h2 className="bold-text bg-black px-4 py-2 absolute bottom-5 left-5 text-white font-bold">
+
+                  </>
+                )}
+                  <h2 className="bold-text bg-black px-4 py-2 peer-hover:scale-125 absolute bottom-5 left-5 text-white font-bold">
                     {about.title}
                   </h2>
               </div>
             </Link>
           ))}
         </div>
-    </>
+    </div>
   );
 };
 
