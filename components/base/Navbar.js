@@ -76,7 +76,7 @@ const Navbar = () => {
                 className="absolute right-4 top-4 h-6 w-6 text-white"
                 onClick={() => setToggle(false)}
               />
-              <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between lg:px-80">
+              <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between md:px-8 xl:px-80">
                 <ul className="text-left">
                   {["Home", "Services", "Works", "Contacts"].map((item) => (
                     <Link
