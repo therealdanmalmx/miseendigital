@@ -12,7 +12,6 @@ const Services = () => {
     const query = '*[_type == "services"]';
 
     client.fetch(query).then((data) => {
-      console.log({data});
       setAbouts(data);
     });
   }, []);

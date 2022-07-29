@@ -19,7 +19,6 @@ const Works = () => {
 
   const handleWorkFilter = (item) => {
     setactiveFilter(item.toLowerCase());
-    console.log({item})
     setanimateCard([{ y: 100, opacity: 0 }]);
 
     setTimeout(() => {
