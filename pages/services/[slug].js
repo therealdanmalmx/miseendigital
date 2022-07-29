@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const query = `*[_type == "abouts" && slug.current == $slug][0] {
+  const query = `*[_type == "services" && slug.current == $slug][0] {
     title,
     description,
     imgUrl,
@@ -41,7 +41,7 @@ export async function getStaticProps({ params }) {
 export default function AboutPage({ abouts }) {
   return (
     <div>
-      <Service abouts={abouts} />
+      <Service about={abouts} />
     </div>
   );
 }

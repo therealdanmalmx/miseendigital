@@ -1,11 +1,14 @@
 import { useRouter } from "next/router";
 import { urlFor } from "../../client";
 import Link from "next/link";
+import { images } from "../../utils";
+import Image from 'next/image'
 
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
-export default function Service({ abouts }) {
-  const { title, description, imgUrl } = abouts;
+export default function Service({ about }) {
+  console.log({about});
+  const { title, description, imgUrl } = about;
   const router = useRouter();
 
   if (router.isFallback) {
@@ -19,26 +22,62 @@ export default function Service({ abouts }) {
       <div className="w-full px-20 pt-20 mx-auto">
         <div className="text-left flex items-center mb-10 hover:text-primary-color">
           <HiOutlineChevronLeft className="w-6 h-6"/>
-            <Link href="/services">
+            <Link
+              passHref
+              href="/services"
+            >
               <a
                 className="text-lg text-black transition duration-300 ease-in-out hover:text-primary-color"
               >
-                Back to services
+                Services
               </a>
           </Link>
         </div>
-        <div className="ring-offset-8 flex flex-col justify-center">
-          <div className="text-left text-5xl font-bold">{title}</div>
-          <div className="mt-3 text-left text-xl font-normal">
-            {description}
-          </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            className="relative mb-10 mt-5 h-[400px] w-full object-cover transition duration-300 ease-in-out md:h-[800px] md:w-[1200px]"
-            src={urlFor(imgUrl)}
+            className="h-[calc(100vh_-_113px)] w-full object-cover"
+            src={`${urlFor(imgUrl)}`}
             alt={urlFor(imgUrl)}
           />
+        <div className="flex flex-col mx-10 ">
+          <div className="text-5xl py-2 px-4 text-white bg-black absolute bottom-40 font-bold">{title}</div>
+          <div className="mt-3 absolute bottom-24 w-1/3 text-black text-xl font-semibold">{description}</div>
         </div>
+          <div className="grid-rows-2 grid-cols-2 items-center w-64 justify-between mt-20 ml-10">
+            <Image
+                src={images.design}
+                width={50}
+                height={50}
+                alt={images.design}
+                className="row-span-1"
+
+            />
+            <h2 className="row-span-1 text-5xl font-bold">Design</h2>
+            <p className="row-span-2 w-[500px] mt-2 ml-[120px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi autem ipsa dolore nesciunt doloribus eos id expedita ullam doloremque dicta!</p>
+            </div>
+            <div className="flex items-center w-64 justify-between mt-20 ml-10">
+            <Image
+                src={images.design}
+                width={50}
+                height={50}
+                alt={images.design}
+
+            />
+            <h2 className="text-5xl font-bold">Develop</h2>
+            </div>
+            <p className="w-[500px] mt-2 ml-[120px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi autem ipsa dolore nesciunt doloribus eos id expedita ullam doloremque dicta!</p>
+            <div className="flex items-center w-64 justify-between mt-20 ml-10">
+            <Image
+                src={images.design}
+                width={50}
+                height={50}
+                alt={images.design}
+
+            />
+            <h2 className="text-5xl font-bold">Deploy</h2>
+            </div>
+            <p className="w-[500px] mt-2 mb-40 ml-[120px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi autem ipsa dolore nesciunt doloribus eos id expedita ullam doloremque dicta!</p>
+
       </div>
     );
   }
