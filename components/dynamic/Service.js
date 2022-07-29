@@ -16,7 +16,7 @@ export default function Service({ abouts }) {
     );
   } else {
     return (
-      <div className="w-full px-20 pt-40 mx-auto">
+      <div className="w-full px-20 pt-20 mx-auto">
         <div className="text-left flex items-center mb-10 hover:text-primary-color">
           <HiOutlineChevronLeft className="w-6 h-6"/>
             <Link href="/services">
