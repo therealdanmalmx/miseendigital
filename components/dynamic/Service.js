@@ -43,41 +43,22 @@ export default function Service({ about }) {
           <div className="text-5xl py-2 px-4 text-white bg-black absolute bottom-40 font-bold">{title}</div>
           <div className="mt-3 absolute bottom-24 w-1/3 text-black text-xl font-semibold">{description}</div>
         </div>
-          <div className="grid-rows-2 grid-cols-2 items-center w-64 justify-between mt-20 ml-10">
-            <Image
-                src={images.design}
-                width={50}
-                height={50}
-                alt={images.design}
-                className="row-span-1"
-
-            />
-            <h2 className="row-span-1 text-5xl font-bold">Design</h2>
-            <p className="row-span-2 w-[500px] mt-2 ml-[120px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi autem ipsa dolore nesciunt doloribus eos id expedita ullam doloremque dicta!</p>
-            </div>
-            <div className="flex items-center w-64 justify-between mt-20 ml-10">
-            <Image
-                src={images.design}
-                width={50}
-                height={50}
-                alt={images.design}
-
-            />
-            <h2 className="text-5xl font-bold">Develop</h2>
-            </div>
-            <p className="w-[500px] mt-2 ml-[120px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi autem ipsa dolore nesciunt doloribus eos id expedita ullam doloremque dicta!</p>
-            <div className="flex items-center w-64 justify-between mt-20 ml-10">
-            <Image
-                src={images.design}
-                width={50}
-                height={50}
-                alt={images.design}
-
-            />
-            <h2 className="text-5xl font-bold">Deploy</h2>
-            </div>
-            <p className="w-[500px] mt-2 mb-40 ml-[120px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi autem ipsa dolore nesciunt doloribus eos id expedita ullam doloremque dicta!</p>
-
+        <div className="grid grid-cols-2 py-11">
+          <div className="grid grid-cols-4 grid-rows-1">
+                <div className="row-span-2 justify-self-center self-center auto-cols-auto">
+                  <Image
+                      src={images.design}
+                      width={80}
+                      height={80}
+                      alt={images.design}
+                  />
+                </div>
+                <div className="col-span-3">
+                  <h2 className="text-4xl font-bold pb-3">Design</h2>
+                  <p className="w-full">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi autem ipsa dolore nesciunt doloribus eos id expedita ullam doloremque dicta!</p>
+                </div>
+          </div>   
+        </div>
       </div>
     );
   }
