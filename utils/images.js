@@ -14,6 +14,7 @@ import srvc from "../assets/services.jpg"
 import tree from "../assets/tree.jpg"
 import bblocks_1 from "../assets/building_blocks_1.jpg"
 import whatyouwant from "../assets/whatyouwant.webp"
+import design from '../assets/graphic-design.png'
 
 export default {
     logoWhite,
@@ -32,5 +33,6 @@ export default {
     tree,
     bblocks_1,
     whatyouwant,
+    design
 
 }

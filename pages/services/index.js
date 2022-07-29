@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/future/image";
-import Link from "next/link";
 import { images } from "../../utils";
-import { urlFor, client } from "../../client";
+import { client } from "../../client";
 import ServicesPage from '../../components/pages/ServicesPage'
 
 const Services = () => {
@@ -12,6 +11,7 @@ const Services = () => {
     const query = '*[_type == "services"]';
 
     client.fetch(query).then((data) => {
+      console.log({data});
       setAbouts(data);
     });
   }, []);
@@ -20,7 +20,7 @@ const Services = () => {
     <div>
       {/* Services heading */}
       <div
-        className="app__hero flex h-[calc(100vh_-_113px)] h-screen max-w-full flex-col items-start justify-center bg-secondary-color bg-center bg-cover"
+        className="app__hero flex h-screen max-w-full flex-col items-start justify-center bg-secondary-color bg-center bg-cover"
         style={{backgroundImage: `url(${images.whatyouwant.src})`}}
       >
         <h1 className="mx-10 max-w-4xl text-left text-5xl font-bold leading-snug text-white md:text-7xl md:leading-tight">
@@ -35,15 +35,6 @@ const Services = () => {
           <span className="mt-4 block"> Period.</span>
         </p>
       </div>
-      {/* Services overview */}
-      {/* <div className="app__services flex flex-col items-center pt-20">
-        <h1 className="app__services-head-text h-96 mb-10 flex-1 flex-col text-center font-bold md:text-5xl">
-          What we can do for you
-        </h1>
-        <p className="app__services-description-text mb-10 w-full px-7 text-center text-base md:w-6/12 md:text-lg">
-          No matter what trends come and go, offering something that customers want, in the easiet way possible and with pleasing aesthetics will never go out of style. We focus on getting the basics right for you and your customers.
-        </p>
-      </div> */}
         {/* Services items */}
         <div className="app__profiles overflow-hidden flex flex-col py-20 cursor-pointer flex-wrap items-center">
           {abouts.map((about, index) => (
@@ -56,6 +47,5 @@ const Services = () => {
     </div>
   );
 };
-
 
 export default Services;

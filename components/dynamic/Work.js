@@ -24,7 +24,7 @@ export default function Work({ works }) {
               <a
                 className="text-lg text-white transition duration-300 ease-in-out hover:text-primary-color"
               >
-                Back to works
+                Works
               </a>
           </Link>
         </div>
