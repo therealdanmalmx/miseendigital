@@ -15,6 +15,8 @@ import tree from "../assets/tree.jpg"
 import bblocks_1 from "../assets/building_blocks_1.jpg"
 import whatyouwant from "../assets/whatyouwant.webp"
 import design from '../assets/graphic-design.png'
+import develop from '../assets/coding.png'
+import deploy from '../assets/deployment.png'
 
 export default {
     logoWhite,
@@ -33,6 +35,8 @@ export default {
     tree,
     bblocks_1,
     whatyouwant,
-    design
+    design,
+    develop,
+    deploy
 
 }
