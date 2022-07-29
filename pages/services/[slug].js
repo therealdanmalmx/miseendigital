@@ -41,7 +41,7 @@ export async function getStaticProps({ params }) {
 export default function AboutPage({ abouts }) {
   return (
     <div>
-      <Service services={abouts} />
+      <Service abouts={abouts} />
     </div>
   );
 }

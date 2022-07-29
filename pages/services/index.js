@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import Image from "next/future/image";
 import Link from "next/link";
 import { images } from "../../utils";
 import { urlFor, client } from "../../client";
+import ServicesPage from '../../components/pages/ServicesPage'
 
 const Services = () => {
   const [abouts, setAbouts] = useState([]);
@@ -12,7 +12,6 @@ const Services = () => {
     const query = '*[_type == "services"]';
 
     client.fetch(query).then((data) => {
-      console.log({data});
       setAbouts(data);
     });
   }, []);
@@ -48,34 +47,15 @@ const Services = () => {
         {/* Services items */}
         <div className="app__profiles overflow-hidden flex flex-col py-20 cursor-pointer flex-wrap items-center">
           {abouts.map((about, index) => (
-            <Link
-              passHref
-              href={`/services/${about.title.toLowerCase().split(" ").join("-")}`}
+            <ServicesPage
               key={about._id}
-            >
-              <div className="relative overflow-hidden w-[325px] h-[400px] my-2 md:my-8 md:h-[400px] md:w-[1024px]">
-                {about.imgUrl && (
-                  <>
-                    <div className="w-full h-[200px] md:w-2/5 z-10 flex flex-col peer justify-center items-center text-sm leading-6 tracking-wide opacity-70 absolute top-0 bg-white md:right-0 md:h-full md:top-0 md:opacity-80 bg-opacity-90">
-                      <p className="mx-10">{about.description}</p>
-                    </div>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={`${urlFor(about.imgUrl)}`}
-                      alt={about.title}
-                      className="ease-in-out duration-500 hover:scale-110 peer-hover:scale-110 block relative w-full h-full object-cover"
-                    />
-                  </>
-                )}
-                  <h2 className="bold-text bg-black px-4 py-2 peer absolute bottom-5 left-5 text-white font-bold">
-                    {about.title}
-                  </h2>
-              </div>
-            </Link>
+              about={about}
+            />
           ))}
         </div>
     </div>
   );
 };
+
 
 export default Services;

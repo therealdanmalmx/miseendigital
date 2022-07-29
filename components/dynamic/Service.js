@@ -1,12 +1,11 @@
 import { useRouter } from "next/router";
 import { urlFor } from "../../client";
 import Link from "next/link";
-import Footer from "../base/Footer";
 
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
-export default function Service({ services }) {
-  const { title, description, imgUrl } = services;
+export default function Service({ abouts }) {
+  const { title, description, imgUrl } = abouts;
   const router = useRouter();
 
   if (router.isFallback) {
