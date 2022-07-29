@@ -36,12 +36,12 @@ export default function Work({ works }) {
           />
         <div className="flex flex-col mx-5 text-white">
           <div className="text-5xl absolute top-48 font-bold">{title}</div>
-          <div className="mt-3 absolute top-72 text-xl font-bold">{description}</div>
+          <div className="mt-3 absolute top-60 text-xl font-bold">{description}</div>
           <Link
             passHref
             href={projectLink}
           >
-            <a className="absolute text-white bottom-72" target="_blank" noreferrer="true" >Project link</a>
+            <a className="absolute text-white top-80" target="_blank" noreferrer="true" >Project link</a>
           </Link>
         </div>
         <div className="m-16">

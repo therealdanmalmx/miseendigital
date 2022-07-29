@@ -4,6 +4,7 @@ import Image from "next/image";
 import { images } from "../../utils";
 import { urlFor, client } from "../../client";
 import { HiOutlineX } from "react-icons/hi";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -95,7 +96,7 @@ const Contacts = () => {
   return (
     <>
     <div className="app__hero flex h-[calc(100vh_-_113px)] max-w-full flex-col items-start justify-center bg-secondary-color bg-cover bg-center" style={{backgroundImage: `url(${images.sample.src})`}}>
-      <h1 className="mb- pl-16 max-w-4xl text-left text-5xl font-bold leading-snug text-white md:text-7xl md:leading-tight">
+      <h1 className="pl-16 max-w-4xl text-left text-5xl font-bold leading-snug text-white md:text-7xl md:leading-tight">
         <span className="text-white">Contacts</span>
       </h1>
       <p className="mb-8 pl-16 text-lg text-white text-left">
@@ -104,7 +105,24 @@ const Contacts = () => {
       </p>
     </div>
 
-    <div className="app__contact w-full flex-1 flex-col py-28">
+    <div className="app__contact w-full flex-1 flex-col py-20">
+      <div className="flex flex-col md:flex-col xl:flex-row xl:justify-center xl:py-28 items-start md:mb-20 md:w-4/5 xl:w-3/5 md:py-14 pl-5 pb-16 md:border-2 md:border-solid md:border-black md:border-opacity-50 m-auto">
+        <div className="flex justify-center items-center pb-10 md:pr-20 xl:pb-0">
+          <FaPhoneAlt className="w-10 h-10 mr-4"/>
+          <div className="flex flex-col">
+            <p className="text-black font-normal text-xl">Phone</p>
+            <h1 className="text-primary-color font-light text-xl md:text-3xl">912 658 932</h1>
+          </div>
+        </div>
+        <div className="flex justify-center items-center">
+          <FaEnvelope className="w-10 h-10 mr-4"/>
+          <div className="flex flex-col">
+            <p className="text-black font-normal text-xl">E-mail</p>
+            <h1 className="text-primary-color font-light text-xl md:text-3xl">hello@miseendigital.com</h1>
+          </div>
+        </div>
+      </div>
+
       <h1 className="app__contact-head-text mb-10 flex-1 flex-col text-center font-bold md:text-5xl">
         Get in touch with us
       </h1>
@@ -114,9 +132,9 @@ const Contacts = () => {
           onSubmit={formValidation}
           className="app__contact-form flex w-full flex-col items-center"
         >
-          <div className="mb-4 flex w-full px-4 md:w-[50%]">
+          <div className="mb-4 flex w-full px-4 lg:w-[100%] xl:w-[50%]">
             <input
-              className="w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
+              className="w-full rounded-xl border-2 p-4 font-sans text-sm placeholder:text-black placeholder:font-bold hover:shadow-md"
               type="text"
               name="name"
               placeholder="Your Name"
@@ -126,9 +144,9 @@ const Contacts = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <div className="mb-4 flex w-full px-4 md:w-[50%]">
+          <div className="mb-4 flex w-full px-4 lg:w-[100%] xl:w-[50%]">
             <input
-              className="w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
+              className="w-full rounded-xl border-2 p-4 font-sans text-sm placeholder:text-black placeholder:font-bold hover:shadow-md"
               type="email"
               name="email"
               placeholder="Your email"
@@ -137,9 +155,9 @@ const Contacts = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <div className="flex w-full px-4 md:w-[50%]">
+          <div className="flex w-full px-4 lg:w-[100%] xl:w-[50%]">
             <textarea
-              className="h-[150px] w-full rounded-xl border-2 bg-light-color p-4 font-sans text-sm placeholder:text-black hover:shadow-md"
+              className="h-[150px] w-full rounded-xl border-2 p-4 font-sans text-sm placeholder:text-black placeholder:font-bold hover:shadow-md"
               placeholder="Your Message"
               value={message}
               name="message"
@@ -149,7 +167,7 @@ const Contacts = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <div className="flex w-full px-4 md:w-[50%] mt-3 mb-3">
+          <div className="flex w-full px-4 lg:w-[100%] xl:w-[50%] mt-3 mb-3">
             <label className="flex">
                 <input
                   type="checkbox"
