@@ -19,8 +19,8 @@ export default function Service({ about }) {
     );
   } else {
     return (
-      <div>
-        <div className="flex items-center text-black hover:text-primary-color absolute bottom-60 mx-10">
+      <div className="w-full px-20 pt-20 mx-auto">
+        <div className="text-left flex items-center mb-10 hover:text-primary-color">
           <HiOutlineChevronLeft className="w-6 h-6"/>
             <Link
               passHref
