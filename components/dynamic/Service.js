@@ -40,7 +40,7 @@ export default function Service({ about }) {
             alt={urlFor(imgUrl)}
           />
         <div className="flex flex-col mx-10 ">
-          <div className="text-5xl py-2 px-4 text-white bg-black absolute bottom-40 font-bold">{title}</div>
+          <div className="text-3xl md:text-5xl py-2 px-4 text-white bg-black absolute bottom-40 font-bold">{title}</div>
           <div className="mt-3 absolute bottom-24 w-1/3 text-black text-xl font-semibold">{description}</div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 py-11">
@@ -61,10 +61,10 @@ export default function Service({ about }) {
           <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 grid-rows-1 pb-10 md:pb-10 lg:pb-0">
                 <div className="row-span-2 justify-self-center self-center">
                   <Image
-                      src={images.design}
+                      src={images.deploy}
                       width={80}
                       height={80}
-                      alt={images.design}
+                      alt={images.deploy}
                   />
                 </div>
                 <div className="col-span-2 md:col-span-2 lg:col-span-2">
