@@ -68,7 +68,7 @@ const Navbar = () => {
 
           {toggle && (
             <motion.div
-              className="fixed top-0 left-0 z-10 flex h-screen w-full items-center justify-start bg-secondary-color p-4 text-center"
+              className="fixed top-0 left-0 flex h-screen w-full items-center justify-start bg-secondary-color p-4 text-center z-50"
               animate={{ y: [-50, 0]}}
               transition={{ duration: 0.5, ease: "easeIn" }}
             >

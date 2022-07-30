@@ -6,7 +6,7 @@ const  ServicesPage = ({ about }) => {
     const { imgUrl, title, description } = about;
 
     return (
-        <div>
+        <div className="z-0">
             <Link
                 passHref
                 href={`/services/${title.toLowerCase().split(" ").join("-")}`}
