@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { urlFor } from "../../client";
 import Link from "next/link";
 import { images } from "../../utils";
-import Image from 'next/image'
+import Image from 'next/future/image'
 import TypeOfServices from './TypeOfServices'
 
 import { HiOutlineChevronLeft } from "react-icons/hi";
@@ -34,10 +34,12 @@ export default function Service({ about }) {
           </Link>
         </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             className="h-[calc(100vh_-_113px)] w-full object-cover"
             src={`${urlFor(imgUrl)}`}
             alt={urlFor(imgUrl)}
+            width="5000"
+            height="5000"
           />
         <div className="flex flex-col mx-10 ">
           <div className="text-3xl md:text-5xl py-2 px-4 text-white bg-black absolute bottom-40 font-bold">{title}</div>
