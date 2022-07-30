@@ -9,9 +9,9 @@ export default function TypeOfServices({ service }) {
         <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 grid-rows-1 pb-10 mt-30 md:pb-10 lg:pb-0">
             <div className="row-span-2 justify-self-center self-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                     src={`${urlFor(iconUrl)}`}
-                    alt={urlFor(iconUrl)}
+                    alt={`${title}-icon`}
                     width={80}
                     height={80}
                     />
