@@ -24,6 +24,7 @@ export async function getStaticProps({ params }) {
     title,
     description,
     imgUrl,
+    typeofservice,
   }`;
 
   const abouts = await client.fetch(query, {
