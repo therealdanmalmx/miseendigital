@@ -22,7 +22,8 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const query = `*[_type == "works" && slug.current == $slug][0] {
     title,
-    description,
+    shortdescription,
+    longdescription,
     codeLink,
     projectLink,
     imgUrl,
