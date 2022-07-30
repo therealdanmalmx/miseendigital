@@ -8,7 +8,6 @@ import TypeOfServices from './TypeOfServices'
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
 export default function Service({ about }) {
-  console.log({about});
   const { title, description, imgUrl, typeofservice } = about;
   const router = useRouter();
 
@@ -44,7 +43,7 @@ export default function Service({ about }) {
           <div className="text-3xl md:text-5xl py-2 px-4 text-white bg-black absolute bottom-40 font-bold">{title}</div>
           <div className="mt-3 absolute bottom-24 w-1/3 text-black text-xl font-semibold">{description}</div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 py-11">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 py-12">
           {typeofservice.map((service) => (
             <TypeOfServices
               key={service._key}

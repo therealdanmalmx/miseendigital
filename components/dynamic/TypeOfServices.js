@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { urlFor } from "../../client";
 
 export default function TypeOfServices({ service }) {
-    console.log({service})
     const { title, description, iconUrl } = service;
     return (
         <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 grid-rows-1 pb-10 mt-30 md:pb-10 lg:pb-0">
