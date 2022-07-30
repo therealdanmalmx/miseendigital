@@ -19,10 +19,12 @@ export default function Service({ about }) {
     );
   } else {
     return (
-      <div>
-        <div className="grid grid-cols-4 grid-rows-2 mx-10 absolute top-2/4 sm:top-1/3 md:top-2/4">
-          <div className="self-center pb-8">
+      <>
+        <div className="grid grid-cols-4 grid-rows-2 mx-10 absolute bottom-20">
+          <div className="flex self-center pb-10">
+            <div>
               <HiOutlineChevronLeft className="w-6 h-6"/>
+            </div>
               <Link
                 passHref
                 href="/services"
@@ -52,7 +54,7 @@ export default function Service({ about }) {
             />
           ))}
         </div>
-      </div>
-        );
+      </>
+      );
       }
     }
