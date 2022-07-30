@@ -6,7 +6,7 @@ import Image from "next/future/image";
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
 export default function Work({ works }) {
-  const { title, description, projectLink, imgUrl } = works;
+  const { title, shortdescription, longdescription, projectLink, imgUrl } = works;
   const router = useRouter();
 
   // if (router.isFallback) {
@@ -36,7 +36,7 @@ export default function Work({ works }) {
           />
         <div className="flex flex-col mx-5 text-white">
           <div className="text-5xl absolute top-48 font-bold">{title}</div>
-          <div className="mt-3 absolute top-60 text-xl font-bold">{description}</div>
+          <div className="mt-3 absolute top-60 text-xl font-bold">{shortdescription}</div>
           <Link
             passHref
             href={projectLink}
@@ -44,9 +44,7 @@ export default function Work({ works }) {
             <a className="absolute text-white top-80" target="_blank" noreferrer="true" >Project link</a>
           </Link>
         </div>
-        <div className="m-16">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad consequuntur rerum, at officia iusto cum nobis ea unde odit molestias, ab nihil perspiciatis officiis magni distinctio quibusdam libero dicta praesentium ex similique voluptates perferendis. Possimus et hic, quam explicabo, corporis laborum facere commodi ratione blanditiis doloremque odit est repudiandae reprehenderit, nostrum necessitatibus! Non eum quae voluptate enim dignissimos at esse, culpa sunt dolor omnis eius obcaecati saepe maxime deserunt vitae, nam delectus? Eveniet porro quis commodi aliquid excepturi ad provident sed architecto ducimus nostrum consequatur laudantium sapiente voluptatibus culpa exercitationem recusandae, vitae praesentium. Hic nihil laboriosam sint, ab velit unde temporibus, corporis saepe ex, quas eius quibusdam ullam. Reprehenderit sed obcaecati maiores inventore fuga ex, reiciendis officia tempora quam. Ipsam obcaecati doloremque pariatur rem! Consectetur, possimus nostrum? Culpa quo officiis quis autem accusantium perferendis sequi mollitia corrupti atque illo totam necessitatibus, laborum ut voluptas pariatur quos esse fugit molestiae nesciunt.
-        </div>
+        <div className="m-16">{longdescription}</div>
       </div>
     );
   }
