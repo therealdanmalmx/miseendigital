@@ -33,7 +33,6 @@ export default function Service({ about }) {
               </a>
           </Link>
         </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <Image
             className="h-[calc(100vh_-_113px)] w-full object-cover"
             src={`${urlFor(imgUrl)}`}
