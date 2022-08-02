@@ -17,35 +17,43 @@ export default function Work({ works }) {
   //   );
   // } else {
     return (
-      <div className="relative">
-        <div className="text-left flex items-center text-white hover:text-primary-color absolute ml-5 top-10">
-          <HiOutlineChevronLeft className="w-6 h-6"/>
-            <Link href="/works">
-              <a
-                className="text-lg text-white transition duration-300 ease-in-out hover:text-primary-color"
+      <>
+        <div className="grid grid-cols-4 grid-rows-2 mx-10 absolute bottom-20">
+          <div className="flex self-center pb-10">
+            <div>
+              <HiOutlineChevronLeft className="w-6 h-6"/>
+            </div>
+              <Link
+                passHref
+                href="/services"
               >
-                Works
-              </a>
-          </Link>
-        </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className="h-[calc(100vh_-_113px)] w-full object-cover"
-            src={`${urlFor(imgUrl)}`}
-            alt={urlFor(imgUrl)}
-          />
-        <div className="flex flex-col mx-5 text-white">
-          <div className="text-5xl absolute top-48 font-bold">{title}</div>
-          <div className="mt-3 absolute top-60 text-xl font-bold">{shortdescription}</div>
-          <Link
+                <a
+                  className="text-lg text-black transition duration-300 ease-in-out hover:text-primary-color"
+                >
+                  Services
+                </a>
+            </Link>
+          </div>
+          <div className="row-start-2 col-span-3 sm:col-span-2 md:col-span-2 lg:col-span-2 md:w-full lg:w-full text-3xl md:text-5xl self-center text-center py-3 px-2 text-white bg-black font-bold">{title}</div>
+          <div className="row-start-3 col-span-4 sm:col-span-3 md:col-span-3 lg:col-span-2 mt-3 lg:w-96 text-black text-base md:text-2xl lg:text-xl font-semibold">
+            {shortdescription}</div>
+            <Link
             passHref
             href={projectLink}
           >
             <a className="absolute text-white top-80" target="_blank" noreferrer="true" >Project link</a>
           </Link>
         </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <Image
+            className="h-[calc(100vh_-_113px)] w-full object-cover"
+            src={`${urlFor(imgUrl)}`}
+            alt={urlFor(imgUrl)}
+            width="5000"
+            height="5000"
+          />
         <div className="m-16">{longdescription}</div>
-      </div>
+      </>
     );
   }
 // }
