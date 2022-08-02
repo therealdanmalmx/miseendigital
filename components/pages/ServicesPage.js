@@ -27,7 +27,7 @@ const  ServicesPage = ({ about }) => {
                     </>
                     )}
                     <h2 className="bold-text bg-black px-4 py-2 peer absolute bottom-5 left-5 text-white font-bold">
-                        {title.toLowerCase() === 'ux ui' ? 'UX/UI' : title}
+                        {title === 'UX UI' ? 'UX/UI' : title}
                     </h2>
                 </div>
             </Link>
