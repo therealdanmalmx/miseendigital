@@ -47,7 +47,7 @@ export default function Work({ works }) {
             width="5000"
             height="5000"
           />
-        <div className="app__contact w-full grid grid-cols-1 md:grid-cols-2 py-28 px-8">
+        <div className="app__contact w-full grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 py-28 px-8">
             <div className="intro-company">
                 <p className="text-left font-normal leading-10 text-xl pb-2">Customer Experience Design</p>
                 <h1 className="app__contact-head-text mb-10 flex-col text-left font-bold leading-tight md:leading-snug text-3xl md:text-5xl">
@@ -62,7 +62,7 @@ export default function Work({ works }) {
                   </Link>
                 </button>
             </div>
-            <div className="text-company pt-10 md:w-10/12">
+            <div className="text-company pt-10 md:w-full lg:w-10/12">
               {longdescription}
             </div>
         </div>
