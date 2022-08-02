@@ -17,11 +17,12 @@ const  ServicesPage = ({ about }) => {
                         <div className="w-full h-[200px] md:w-2/5 z-10 flex flex-col peer justify-center items-center text-sm leading-6 tracking-wide opacity-70 absolute top-0 bg-white md:right-0 md:h-full md:top-0 md:opacity-80 bg-opacity-90">
                         <p className="mx-10">{description}</p>
                         </div>
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                        src={`${urlFor(imgUrl)}`}
-                        alt={title}
-                        className="ease-in-out duration-500 hover:scale-110 peer-hover:scale-110 block relative w-full h-full object-cover"
+                        <Image
+                            src={`${urlFor(imgUrl)}`}
+                            alt={title}
+                            width="5000"
+                            height="5000"
+                            className="ease-in-out duration-500 hover:scale-110 peer-hover:scale-110 block relative w-full h-full object-cover"
                         />
                     </>
                     )}
