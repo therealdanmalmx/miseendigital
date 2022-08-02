@@ -46,13 +46,15 @@ export default function Service({ about }) {
             width="5000"
             height="5000"
           />
-        {!typeofservice && undefined}
+        <div className="grid grid-cols-1 lg:grid-cols-3 py-12">
+          {!typeofservice && <div className="px-12 font-bold">No additional services </div>}
           {typeofservice && typeofservice.map((service) => (
               <TypeOfServices
                 key={service._key}
                 service={service}
               />
           ))}
+        </div>
       </>
       );
       }
