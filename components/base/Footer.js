@@ -9,9 +9,8 @@ import Image from 'next/image'
 
 const company = [
   { title: "About us", url: "/about" },
-  { title: "Portfolio", url: "/work" },
+  { title: "Portfolio", url: "/works" },
   { title: "Clients", url: "/clients" },
-  { title: "Testimonials", url: "/testimonials" },
 ];
 
 const services = [

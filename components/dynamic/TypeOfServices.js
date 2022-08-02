@@ -4,7 +4,7 @@ import { urlFor } from "../../client";
 export default function TypeOfServices({ service }) {
     const { title, description, iconUrl } = service;
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-3 py-12">
+        <>
             <div className="grid grid-cols-3 grid-rows-1 pb-10 mt-30 md:pb-10 lg:pb-0">
                 <div className="row-span-2 justify-self-center self-center">
                     <Image
@@ -19,7 +19,6 @@ export default function TypeOfServices({ service }) {
                         <p className="w-full">{ description }</p>
                     </div>
             </div>
-
-        </div>
+        </>
     )
 }
