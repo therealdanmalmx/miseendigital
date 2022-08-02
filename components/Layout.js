@@ -1,7 +1,7 @@
 import Navbar from './base/Navbar'
 import Footer from './base/Footer'
 
-function Layout({children}) {
+function Layout({ children }) {
 
   return (
     <>
