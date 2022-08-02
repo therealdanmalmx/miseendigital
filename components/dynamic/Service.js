@@ -9,7 +9,6 @@ import { HiOutlineChevronLeft } from "react-icons/hi";
 
 export default function Service({ about }) {
   const { title, description, imgUrl, typeofservice } = about;
-  title.toLowerCase() === 'ux ui' && 'ux/ui'
   const router = useRouter();
 
   if (router.isFallback) {
