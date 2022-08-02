@@ -9,6 +9,7 @@ import { HiOutlineChevronLeft } from "react-icons/hi";
 
 export default function Service({ about }) {
   const { title, description, imgUrl, typeofservice } = about;
+  title.toLowerCase() === 'ux ui' && 'ux/ui'
   const router = useRouter();
 
   if (router.isFallback) {
@@ -36,7 +37,7 @@ export default function Service({ about }) {
                 </a>
             </Link>
           </div>
-          <div className="row-start-2 col-span-3 sm:col-span-2 md:col-span-2 lg:col-span-2 md:w-full lg:w-full text-3xl md:text-5xl self-center text-center py-3 px-2 text-white bg-black font-bold">{title}</div>
+          <div className="row-start-2 col-span-3 sm:col-span-2 md:col-span-2 lg:col-span-2 md:w-full lg:w-full text-3xl md:text-5xl self-center text-center py-3 px-2 text-white bg-black font-bold">{title.toLowerCase() === 'ux ui' ? 'UX/UI' : title}</div>
           <div className="row-start-3 col-span-4 sm:col-span-3 md:col-span-3 lg:col-span-2 mt-3 lg:w-96 text-black text-base md:text-2xl lg:text-xl font-semibold">{description}</div>
         </div>
           <Image
