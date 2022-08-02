@@ -19,30 +19,25 @@ export default function Work({ works }) {
     return (
       <>
         <div className="grid grid-cols-4 grid-rows-2 mx-10 absolute bottom-20">
-          <div className="flex self-center pb-10">
+          <div className="flex self-center pb-10 group transition duration-300 ease-in-out">
             <div>
-              <HiOutlineChevronLeft className="w-6 h-6"/>
+              <HiOutlineChevronLeft className="w-6 h-6 text-white group-hover:text-primary-color"/>
             </div>
               <Link
                 passHref
                 href="/services"
               >
                 <a
-                  className="text-lg text-black transition duration-300 ease-in-out hover:text-primary-color"
+                  className="text-lg text-white transition duration-300 ease-in-out group-hover:text-primary-color"
                 >
                   Services
                 </a>
             </Link>
           </div>
           <div className="row-start-2 col-span-3 sm:col-span-2 md:col-span-2 lg:col-span-2 md:w-full lg:w-full text-3xl md:text-5xl self-center text-center py-3 px-2 text-white bg-black font-bold">{title}</div>
-          <div className="row-start-3 col-span-4 sm:col-span-3 md:col-span-3 lg:col-span-2 mt-3 lg:w-96 text-black text-base md:text-2xl lg:text-xl font-semibold">
-            {shortdescription}</div>
-            <Link
-            passHref
-            href={projectLink}
-          >
-            <a className="absolute text-white top-80" target="_blank" noreferrer="true" >Project link</a>
-          </Link>
+          <div className="row-start-3 col-span-4 sm:col-span-3 md:col-span-3 lg:col-span-2 mt-3 lg:w-96 text-white text-base md:text-2xl lg:text-xl font-semibold">
+            {shortdescription}
+          </div>
         </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <Image
@@ -52,7 +47,25 @@ export default function Work({ works }) {
             width="5000"
             height="5000"
           />
-        <div className="m-16">{longdescription}</div>
+        <div className="app__contact w-full grid grid-cols-1 md:grid-cols-2 py-28 px-8">
+            <div className="intro-company">
+                <p className="text-left font-normal leading-10 text-xl pb-2">Customer Experience Design</p>
+                <h1 className="app__contact-head-text mb-10 flex-col text-left font-bold leading-tight md:leading-snug text-3xl md:text-5xl">
+                    About the Project
+                </h1>
+                <button className="text-black duration-300 ease-in-out">
+                  <Link
+                    passHref
+                    href={projectLink}
+                  >
+                    <a className="text-white" target="_blank" noreferrer="true" >Visit Project</a>
+                  </Link>
+                </button>
+            </div>
+            <div className="text-company pt-10 md:w-10/12">
+              {longdescription}
+            </div>
+        </div>
       </>
     );
   }
