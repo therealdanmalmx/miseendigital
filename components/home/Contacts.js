@@ -1,10 +1,6 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { images } from "../../utils";
-import { urlFor, client } from "../../client";
+import { useState } from "react";
+import { client } from "../../client";
 import { HiOutlineX } from "react-icons/hi";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -31,10 +27,6 @@ const Contacts = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const errorMessageHandling = (message) => {
-    setAllErrors(message)
-  }
-
   const clearErrorMessage = () => {
     document
       .querySelectorAll("input")
@@ -46,7 +38,7 @@ const Contacts = () => {
   const formValidation = (e) => {
     e.preventDefault();
     if (!formData.message) {
-      setAllErrors("A message is required");
+      setErrorMessage("A message is required");
       const message = document.querySelector("textarea");
       message.style.border = "2px solid #DC2638";
       message.addEventListener("keydown", () => {
@@ -54,7 +46,7 @@ const Contacts = () => {
       });
     }
     if (!formData.email) {
-      setAllErrors("E-mail is required");
+      setErrorMessage("E-mail is required");
       const email = document.querySelector('input[name = "email"]');
       email.style.border = "2px solid #DC2638";
       email.addEventListener("keydown", () => {
@@ -62,7 +54,7 @@ const Contacts = () => {
       });
     }
     if (!formData.name) {
-      setAllErrors("Your name is required");
+      setErrorMessage("Your name is required");
       const name = document.querySelector('input[name = "name"]');
       name.style.border = "2px solid #DC2638";
       name.addEventListener("keydown", () => {
@@ -112,7 +104,7 @@ const Contacts = () => {
           onSubmit={formValidation}
           className="app__contact-form flex w-full flex-col items-center"
         >
-          <div className="mb-4 flex w-full px-4 lg:w-[100%] xl:w-[50%]">
+          <div className="mb-4 flex w-full px-4 md:w-[50%]">
             <input
               className="w-full rounded-xl border-2 p-4 font-sans text-sm placeholder:text-black placeholder:font-bold hover:shadow-md"
               type="text"
@@ -124,7 +116,7 @@ const Contacts = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <div className="mb-4 flex w-full px-4 lg:w-[100%] xl:w-[50%]">
+          <div className="mb-4 flex w-full px-4 md:w-[50%]">
             <input
               className="w-full rounded-xl border-2 p-4 font-sans text-sm placeholder:text-black placeholder:font-bold hover:shadow-md"
               type="email"
@@ -135,7 +127,7 @@ const Contacts = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <div className="flex w-full px-4 lg:w-[100%] xl:w-[50%]">
+          <div className="flex w-full px-4 md:w-[50%]">
             <textarea
               className="h-[150px] w-full rounded-xl border-2 p-4 font-sans text-sm placeholder:text-black placeholder:font-bold hover:shadow-md"
               placeholder="Your Message"
@@ -147,7 +139,7 @@ const Contacts = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <div className="flex w-full px-4 lg:w-[100%] xl:w-[50%] mt-3 mb-3">
+          <div className="flex w-full px-4 md:w-[50%] mt-3 mb-3">
             <label className="flex">
                 <input
                   type="checkbox"
