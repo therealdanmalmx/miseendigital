@@ -2,10 +2,11 @@ import { client } from "../../client";
 import Service from "../../components/dynamic/Service";
 
 export async function getStaticPaths() {
-  const query = '*[_type == "abouts" && defined(slug.current)][].slug.current';
+  const query =
+    '*[_type == "services" && defined(slug.current)][].slug.current';
 
-  const abouts = await client.fetch(query);
-  const paths = abouts.map((slug) => {
+  const services = await client.fetch(query);
+  const paths = services.map((slug) => {
     return {
       params: {
         slug,
@@ -27,22 +28,22 @@ export async function getStaticProps({ params }) {
     typeofservice,
   }`;
 
-  const abouts = await client.fetch(query, {
+  const services = await client.fetch(query, {
     slug: params.slug,
   });
 
   return {
     props: {
-      abouts,
+      services,
     },
     revalidate: 3600,
   };
 }
 
-export default function AboutPage({ abouts }) {
+export default function ServicesPage({ services }) {
   return (
     <div>
-      <Service about={abouts} />
+      <Service services={services} />
     </div>
   );
 }
