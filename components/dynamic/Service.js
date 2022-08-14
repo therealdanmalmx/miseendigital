@@ -12,7 +12,7 @@ export default function Service({ services }) {
   const { title, description, imgUrl, typeofservice } = services;
   const router = useRouter();
 
-  if (router.isFallback && !service) {
+  if (router.isFallback && !services) {
     return (
       <section>
         <h1>Loading...</h1>

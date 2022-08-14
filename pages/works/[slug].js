@@ -25,7 +25,6 @@ export async function getStaticProps({ params }) {
     title,
     shortdescription,
     longdescription,
-    codeLink,
     projectLink,
     imgUrl,
   }`;

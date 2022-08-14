@@ -6,6 +6,7 @@ import Image from "next/future/image";
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
 export default function Work({ works }) {
+  console.log({ works });
   const { title, shortdescription, longdescription, projectLink, imgUrl } =
     works;
   const router = useRouter();
