@@ -1,11 +1,7 @@
-import {
-  FaInstagram,
-  FaTwitter,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import { images } from "../../utils";
-import Image from 'next/image'
+import Image from "next/image";
 
 const company = [
   { title: "About us", url: "/about" },
@@ -15,7 +11,7 @@ const company = [
 ];
 
 const services = [
-  { title: "UX/UI", url: "/services/web-design"},
+  { title: "UX/UI", url: "/services/web-design" },
   { title: "Web Development", url: "/services/web-development" },
   { title: "e-Commerce (incl. Shopify)", url: "/services/e-commerce" },
 ];
@@ -55,18 +51,18 @@ const Footer = () => {
         <h1 className="mr-4 mb-4 text-base font-bold text-white">Contacts</h1>
         <p className="text-grey-color">Tel. +351 912 658 932</p>
         <p className="text-grey-color">hello@miseendigital.com</p>
-        <button className="bg-primary-color mt-7 transition duration-300 ease-in-out hover:bg-white hover:text-black">
+        <button className="mt-7 bg-primary-color transition duration-300 ease-in-out hover:bg-white hover:text-black">
           Get in touch
         </button>
       </div>
-      <div className="app__footer-col-1 mt-10 sm:mt-0 min-w-max sm:order-last md:order-first md:mt-0">
+      <div className="app__footer-col-1 mt-10 min-w-max sm:order-last sm:mt-0 md:order-first md:mt-0">
         <div className="app__footer-logo flex items-center justify-start pb-2">
-            <Image
-              src={images.logoWhite}
-              width={250}
-              height={31}
-              alt={images.logoWhite}
-            />
+          <Image
+            src={images.logoWhite}
+            width={250}
+            height={31}
+            alt="Mise en Digital logo"
+          />
         </div>
         <div className="app__footer-brand">
           <p className="text-white">
@@ -74,11 +70,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="mt-2 mb-10">
-          <Link
-            passHref
-            className="text-xs"
-            href="/privacy_policy"
-          >
+          <Link passHref className="text-xs" href="/privacy_policy">
             <a>Privacy Policy</a>
           </Link>
         </div>
@@ -86,26 +78,26 @@ const Footer = () => {
           <div className="group">
             <a
               href=""
-              className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full bg-white duration-300 ease-in-out group-hover:bg-primary-color"
+              className="mr-2 flex h-7 w-7 cursor-pointer items-center justify-center rounded-full bg-white duration-300 ease-in-out group-hover:bg-primary-color"
             >
               <FaInstagram className="text-secondary-color group-hover:text-white" />
             </a>
           </div>
           <div className="group">
-          <a
-            href=""
-            className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full bg-white duration-300 ease-in-out group-hover:bg-primary-color"
-          >
-            <FaTwitter className="text-secondary-color group-hover:text-white" />
-          </a>
+            <a
+              href=""
+              className="mr-2 flex h-7 w-7 cursor-pointer items-center justify-center rounded-full bg-white duration-300 ease-in-out group-hover:bg-primary-color"
+            >
+              <FaTwitter className="text-secondary-color group-hover:text-white" />
+            </a>
           </div>
           <div className="group">
-          <a
-            href=""
-            className="mr-2 flex w-7 h-7 cursor-pointer items-center justify-center rounded-full duration-300 ease-in-out bg-white group-hover:bg-primary-color"
-          >
-            <FaLinkedinIn className="text-secondary-color  group-hover:text-white" />
-          </a>
+            <a
+              href=""
+              className="mr-2 flex h-7 w-7 cursor-pointer items-center justify-center rounded-full bg-white duration-300 ease-in-out group-hover:bg-primary-color"
+            >
+              <FaLinkedinIn className="text-secondary-color  group-hover:text-white" />
+            </a>
           </div>
         </div>
       </div>

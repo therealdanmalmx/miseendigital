@@ -43,8 +43,10 @@ export default function Service({ services }) {
           className="h-[calc(100vh_-_113px)] w-full object-cover"
           src={`${urlFor(imgUrl)}`}
           alt={urlFor(imgUrl)}
-          width="5000"
-          height="5000"
+          width={1000}
+          height={10}
+          layout="fill"
+          priority
         />
         <div className="grid grid-cols-1 py-12 lg:grid-cols-3">
           {!typeofservice && (
