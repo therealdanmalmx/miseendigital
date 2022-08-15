@@ -3,13 +3,11 @@ module.exports = {
   experimental: {
     images: {
       allowFutureImage: true,
-      unoptimized: false,
+      unoptimized: true,
     },
   },
   images: {
     domains: ["cdn.sanity.io", "localhost"],
-    loader: "cloudinary",
     formats: ["image/webp"],
-    // path: "https://test-medigital.surge.sh/",
   },
 };
