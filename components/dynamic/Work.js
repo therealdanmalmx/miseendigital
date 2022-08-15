@@ -43,8 +43,9 @@ export default function Work({ works }) {
           className="h-[calc(100vh_-_113px)] w-full object-cover"
           src={`${urlFor(imgUrl)}`}
           alt={urlFor(imgUrl)}
-          width="5000"
-          height="5000"
+          width={1000}
+          height={100}
+          layout="fill"
         />
         <div className="app__contact grid w-full grid-cols-1 py-28 px-8 md:grid-cols-1 lg:grid-cols-2">
           <div className="intro-company">

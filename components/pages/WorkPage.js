@@ -16,13 +16,11 @@ const WorkPage = ({ work }) => {
       >
         <div className="app__work-img relative">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <div className="h-64 w-[22rem] sm:h-96 sm:w-[36rem] lg:h-72 lg:w-[30rem] xl:h-96 xl:w-[36rem]">
+          <div className="relative h-64 w-[22rem] sm:h-96 sm:w-[36rem] lg:h-72 lg:w-[30rem] xl:h-96 xl:w-[36rem]">
             <Image
               className="cursor-pointer object-cover"
               src={`${urlFor(imgUrl)}`}
               alt={work.name}
-              width={16}
-              height={9}
               layout="fill"
             />
           </div>

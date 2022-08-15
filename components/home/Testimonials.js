@@ -25,7 +25,7 @@ const Testimonial = () => {
   let testimonialSecond = testimonials[currentIndex + 1];
 
   return (
-    <div className="app__testimonials w-full min-h-screen flex flex-col justify-center items-center py-28">
+    <div className="app__testimonials flex min-h-screen w-full flex-col items-center justify-center py-28">
       <h4 className="mb-8 text-center text-5xl font-bold">
         What people think of our work
       </h4>
@@ -38,13 +38,15 @@ const Testimonial = () => {
             <div className="md:mb-10">
               <div className="max-w-1/2 mx-6 mb-4 md:mx-12 md:mb-0 md:max-w-2xl">
                 <div className="md:flex">
-                  <div className="md:shrink-0 h-full relative overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      className="relative h-48 w-full object-cover rounded-tl-3xl rounded-br-3xl transition duration-500 ease-in-out hover:scale-110 md:h-60 md:w-72"
-                      src={urlFor(testimonial.imgUrl)}
+                  <div className="h-full w-80 shrink-0">
+                    <Image
+                      src={`${urlFor(testimonial.imgUrl)}`}
                       alt={urlFor(testimonial.imgUrl)}
-                      />
+                      layout="responsive"
+                      width={3}
+                      height={2}
+                      className="rounded-tl-3xl rounded-br-3xl transition duration-500 ease-in-out hover:scale-110"
+                    />
                   </div>
                   <div className="flex flex-col justify-around p-4">
                     <div>
@@ -65,20 +67,22 @@ const Testimonial = () => {
             <div>
               <div className="max-w-1/2 mx-6 mb-4 overflow-hidden md:mx-12 md:mb-0 md:max-w-2xl">
                 <div className="md:flex">
-                  <div className="md:shrink-0 h-full relative overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      className="relative h-48 w-full object-cover rounded-tl-3xl rounded-br-3xl transition duration-500 ease-in-out hover:scale-110 md:h-60 md:w-72"
-                      src={urlFor(testimonialSecond.imgUrl)}
+                  <div className="h-full w-80 shrink-0">
+                    <Image
+                      src={`${urlFor(testimonialSecond.imgUrl)}`}
                       alt={urlFor(testimonialSecond.imgUrl)}
-                      />
+                      layout="responsive"
+                      width={3}
+                      height={2}
+                      className="rounded-tl-3xl rounded-br-3xl transition duration-500 ease-in-out hover:scale-110"
+                    />
                   </div>
                   <div className="flex flex-col justify-between p-4 md:justify-around">
                     <div>
                       <div className="text-2xl font-bold capitalize tracking-wide text-black ">
                         {testimonialSecond.name}
                       </div>
-                      <p className="block mb-3 text-xl font-medium leading-tight text-black">
+                      <p className="mb-3 block text-xl font-medium leading-tight text-black">
                         {testimonialSecond.company}
                       </p>
                     </div>

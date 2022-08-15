@@ -8,7 +8,8 @@ module.exports = {
   },
   images: {
     domains: ["cdn.sanity.io", "localhost"],
-    // loader: "imgix",
+    loader: "cloudinary",
+    formats: ["image/webp"],
     // path: "https://test-medigital.surge.sh/",
   },
 };

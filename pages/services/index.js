@@ -25,17 +25,15 @@ const Services = () => {
           <span className="text-white">What we do</span>
         </h1>
         <p className="mx-10 text-left text-lg text-white">
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          We're not much for hyperbole, slogans or empty talk. We develop web
-          stuff.
+          We&apos;re not much for hyperbole, slogans or empty talk. We develop
+          web stuff.
           <span className="block">
             We are not a full service agency. We focus on a selected few tasks
             that we try to master.
           </span>
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <span className="block">
-            We don't sugar-coat anything. You get what you came here to get. Our
-            expertise.{" "}
+            We don&apos;t sugar-coat anything. You get what you came here to
+            get. Our expertise.{" "}
           </span>
           <span className="mt-4 block"> Period.</span>
         </p>
