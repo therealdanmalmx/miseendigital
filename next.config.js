@@ -2,10 +2,11 @@ module.exports = {
   reactStrictMode: true,
   experimental: {
     images: {
-      allowFutureImage: true
-    }
+      allowFutureImage: true,
+      unoptimized: true,
+    },
   },
   images: {
-    domains: ['cdn.sanity.io', 'localhost'],
+    domains: ["cdn.sanity.io", "localhost"],
   },
 };
